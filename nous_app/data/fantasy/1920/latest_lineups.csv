@@ -1,0 +1,481 @@
+,position,player,team,gw_score,season_score,bench,owner,gw
+0,G,Ederson Moraes,Heung like Son,7,17,False,Dylan Urquhart,1
+1,D,Holebas,Heung like Son,1,2,False,Dylan Urquhart,1
+2,D,Robertson,Heung like Son,2,12,False,Dylan Urquhart,1
+3,D,Coleman,Heung like Son,6,12,False,Dylan Urquhart,1
+4,M,Pereyra,Heung like Son,1,4,False,Dylan Urquhart,1
+5,M,Sterling,Heung like Son,20,37,False,Dylan Urquhart,1
+6,M,Mahrez,Heung like Son,14,19,False,Dylan Urquhart,1
+7,M,Lucas Moura,Heung like Son,5,13,False,Dylan Urquhart,1
+8,F,Wilson,Heung like Son,5,20,False,Dylan Urquhart,1
+9,F,Danny Ings,Heung like Son,2,15,False,Dylan Urquhart,1
+10,F,Pukki,Heung like Son,7,37,False,Dylan Urquhart,1
+11,M,Son Heung-Min,Heung like Son,0,7,True,Dylan Urquhart,1
+12,D,Kolasinac,Heung like Son,0,2,True,Dylan Urquhart,1
+13,G,Schmeichel,Heung like Son,6,13,True,Dylan Urquhart,1
+14,D,Jonny,Heung like Son,5,9,True,Dylan Urquhart,1
+15,G,Guaita,Ain't No Holebas Girl,2,15,False,Tom Barratt,2
+16,D,Chilwell,Ain't No Holebas Girl,0,11,False,Tom Barratt,2
+17,D,Azpilicueta,Ain't No Holebas Girl,2,7,False,Tom Barratt,2
+18,D,Boly,Ain't No Holebas Girl,2,16,False,Tom Barratt,2
+19,M,Sigurdsson,Ain't No Holebas Girl,3,13,False,Tom Barratt,2
+20,M,Tielemans,Ain't No Holebas Girl,2,19,False,Tom Barratt,2
+21,M,Mané,Ain't No Holebas Girl,13,25,False,Tom Barratt,2
+22,M,Ndombele,Ain't No Holebas Girl,6,14,False,Tom Barratt,2
+23,F,Joelinton,Ain't No Holebas Girl,1,13,False,Tom Barratt,2
+24,F,Kean,Ain't No Holebas Girl,1,8,False,Tom Barratt,2
+25,F,Jota,Ain't No Holebas Girl,2,7,False,Tom Barratt,2
+26,D,Cresswell,Ain't No Holebas Girl,0,0,True,Tom Barratt,2
+27,M,Felipe Anderson,Ain't No Holebas Girl,0,9,True,Tom Barratt,2
+28,D,Stones,Ain't No Holebas Girl,0,6,True,Tom Barratt,2
+29,G,Alisson,Ain't No Holebas Girl,0,1,True,Tom Barratt,2
+30,G,de Gea,Chopporoos,2,15,False,Dominic Drewery,4
+31,D,Maguire,Chopporoos,1,10,False,Dominic Drewery,4
+32,D,Laporte,Chopporoos,0,9,False,Dominic Drewery,4
+33,D,Matip,Chopporoos,6,17,False,Dominic Drewery,4
+34,M,Ceballos,Chopporoos,1,15,False,Dominic Drewery,4
+35,M,Lo Celso,Chopporoos,1,3,False,Dominic Drewery,4
+36,M,Grealish,Chopporoos,1,12,False,Dominic Drewery,4
+37,M,Fraser,Chopporoos,6,11,False,Dominic Drewery,4
+38,M,Silva,Chopporoos,10,24,False,Dominic Drewery,4
+39,F,Vardy,Chopporoos,16,28,False,Dominic Drewery,4
+40,F,Kane,Chopporoos,6,23,False,Dominic Drewery,4
+41,D,Doherty,Chopporoos,0,9,True,Dominic Drewery,4
+42,D,Cancelo,Chopporoos,0,1,True,Dominic Drewery,4
+43,D,Rüdiger,Chopporoos,0,0,True,Dominic Drewery,4
+44,G,Mat Ryan,Chopporoos,0,12,True,Dominic Drewery,4
+45,G,Patrício,"Corner taken quickly, ORIGIII!",2,20,False,Liam Fariss,4
+46,D,Emerson,"Corner taken quickly, ORIGIII!",1,4,False,Liam Fariss,4
+47,D,Zinchenko,"Corner taken quickly, ORIGIII!",6,15,False,Liam Fariss,4
+48,D,Wan-Bissaka,"Corner taken quickly, ORIGIII!",2,11,False,Liam Fariss,4
+49,D,Evans,"Corner taken quickly, ORIGIII!",2,14,False,Liam Fariss,4
+50,M,Richarlison,"Corner taken quickly, ORIGIII!",15,23,False,Liam Fariss,4
+51,M,Dele Alli,"Corner taken quickly, ORIGIII!",1,1,False,Liam Fariss,4
+52,M,Pépé,"Corner taken quickly, ORIGIII!",5,9,False,Liam Fariss,4
+53,M,Lanzini,"Corner taken quickly, ORIGIII!",3,18,False,Liam Fariss,4
+54,F,Haller,"Corner taken quickly, ORIGIII!",8,23,False,Liam Fariss,4
+55,F,Lacazette,"Corner taken quickly, ORIGIII!",5,14,False,Liam Fariss,4
+56,G,Fabianski,"Corner taken quickly, ORIGIII!",7,13,True,Liam Fariss,4
+57,M,Martial,"Corner taken quickly, ORIGIII!",0,19,True,Liam Fariss,4
+58,M,Ayoze Pérez,"Corner taken quickly, ORIGIII!",0,7,True,Liam Fariss,4
+59,F,Gabriel Jesus,"Corner taken quickly, ORIGIII!",0,7,True,Liam Fariss,4
+60,G,Pickford,The Feminist Agenda,2,16,False,Liam Hussey,4
+61,D,Pereira,The Feminist Agenda,2,15,False,Liam Hussey,4
+62,D,van Aanholt,The Feminist Agenda,6,24,False,Liam Hussey,4
+63,D,Digne,The Feminist Agenda,5,23,False,Liam Hussey,4
+64,M,Pogba,The Feminist Agenda,2,13,False,Liam Hussey,4
+65,M,Maddison,The Feminist Agenda,2,16,False,Liam Hussey,4
+66,M,Bernardo Silva,The Feminist Agenda,6,10,False,Liam Hussey,4
+67,M,Milivojevic,The Feminist Agenda,2,7,False,Liam Hussey,4
+68,F,Agüero,The Feminist Agenda,16,40,False,Liam Hussey,4
+69,F,Gray,The Feminist Agenda,2,13,False,Liam Hussey,4
+70,F,Abraham,The Feminist Agenda,13,28,False,Liam Hussey,4
+71,D,Aké,The Feminist Agenda,1,5,True,Liam Hussey,4
+72,G,Pope,The Feminist Agenda,2,15,True,Liam Hussey,4
+73,D,Mendy,The Feminist Agenda,0,0,True,Liam Hussey,4
+74,M,Redmond,The Feminist Agenda,0,14,True,Liam Hussey,4
+75,G,Adrián,best in the west,6,12,False,james west,4
+76,D,Rose,best in the west,0,4,False,james west,4
+77,D,van Dijk,best in the west,7,19,False,james west,4
+78,D,Mina,best in the west,1,18,False,james west,4
+79,D,David Luiz,best in the west,1,2,False,james west,4
+80,M,De Bruyne,best in the west,13,36,False,james west,4
+81,M,James,best in the west,8,21,False,james west,4
+82,M,Wilson,best in the west,2,16,False,james west,4
+83,M,Pulisic,best in the west,5,13,False,james west,4
+84,F,Roberto Firmino,best in the west,12,27,False,james west,4
+85,F,Wesley,best in the west,2,15,False,james west,4
+86,D,Shaw,best in the west,0,9,True,james west,4
+87,G,Leno,best in the west,3,14,True,james west,4
+88,M,Sarr,best in the west,0,1,True,james west,4
+89,M,Özil,best in the west,0,0,True,james west,4
+90,G,Kepa,Ol' Cider's Lowry,2,5,False,Matt Lowry,3
+91,D,Otamendi,Ol' Cider's Lowry,1,8,False,Matt Lowry,3
+92,D,Walker,Ol' Cider's Lowry,1,16,False,Matt Lowry,3
+93,D,Alonso,Ol' Cider's Lowry,1,1,False,Matt Lowry,3
+94,M,Mount,Ol' Cider's Lowry,8,22,False,Matt Lowry,3
+95,M,Salah,Ol' Cider's Lowry,15,36,False,Matt Lowry,3
+96,M,Antonio,Ol' Cider's Lowry,4,6,False,Matt Lowry,3
+97,M,Bernard,Ol' Cider's Lowry,2,16,False,Matt Lowry,3
+98,F,Jiménez,Ol' Cider's Lowry,9,18,False,Matt Lowry,3
+99,F,Deulofeu,Ol' Cider's Lowry,2,6,False,Matt Lowry,3
+100,F,Rashford,Ol' Cider's Lowry,0,21,False,Matt Lowry,3
+101,M,Almirón,Ol' Cider's Lowry,3,8,True,Matt Lowry,3
+102,G,Foster,Ol' Cider's Lowry,3,11,True,Matt Lowry,3
+103,D,Vertonghen,Ol' Cider's Lowry,0,1,True,Matt Lowry,3
+104,D,Gomez,Ol' Cider's Lowry,0,2,True,Matt Lowry,3
+105,G,Pickford,The Feminist Agenda,1,16,False,Liam Hussey,3
+106,D,Pereira,The Feminist Agenda,2,15,False,Liam Hussey,3
+107,D,Keane,The Feminist Agenda,1,16,False,Liam Hussey,3
+108,D,Digne,The Feminist Agenda,1,23,False,Liam Hussey,3
+109,M,Milivojevic,The Feminist Agenda,1,7,False,Liam Hussey,3
+110,M,Pogba,The Feminist Agenda,2,13,False,Liam Hussey,3
+111,M,Maddison,The Feminist Agenda,6,16,False,Liam Hussey,3
+112,M,Bernardo Silva,The Feminist Agenda,2,10,False,Liam Hussey,3
+113,M,Redmond,The Feminist Agenda,10,14,False,Liam Hussey,3
+114,F,Agüero,The Feminist Agenda,13,40,False,Liam Hussey,3
+115,F,Abraham,The Feminist Agenda,13,28,False,Liam Hussey,3
+116,F,Hernandez,The Feminist Agenda,0,9,True,Liam Hussey,3
+117,G,Pope,The Feminist Agenda,2,15,True,Liam Hussey,3
+118,M,Townsend,The Feminist Agenda,1,7,True,Liam Hussey,3
+119,D,Mendy,The Feminist Agenda,0,0,True,Liam Hussey,3
+120,G,Adrián,best in the west,2,12,False,james west,3
+121,D,Shaw,best in the west,1,9,False,james west,3
+122,D,van Dijk,best in the west,2,19,False,james west,3
+123,D,Mina,best in the west,1,18,False,james west,3
+124,D,David Luiz,best in the west,0,2,False,james west,3
+125,D,Rose,best in the west,1,4,False,james west,3
+126,M,De Bruyne,best in the west,5,36,False,james west,3
+127,M,Sarr,best in the west,1,1,False,james west,3
+128,M,Pulisic,best in the west,5,13,False,james west,3
+129,F,Wesley,best in the west,9,15,False,james west,3
+130,F,Roberto Firmino,best in the west,2,27,False,james west,3
+131,F,Gabriel Jesus,best in the west,0,7,True,james west,3
+132,M,Özil,best in the west,0,0,True,james west,3
+133,M,Walcott,best in the west,1,2,True,james west,3
+134,G,Leno,best in the west,1,14,True,james west,3
+135,G,Pickford,The Feminist Agenda,6,16,False,Liam Hussey,2
+136,D,Pereira,The Feminist Agenda,2,15,False,Liam Hussey,2
+137,D,Digne,The Feminist Agenda,11,23,False,Liam Hussey,2
+138,D,Keane,The Feminist Agenda,6,16,False,Liam Hussey,2
+139,M,Pogba,The Feminist Agenda,0,13,False,Liam Hussey,2
+140,M,Milivojevic,The Feminist Agenda,2,7,False,Liam Hussey,2
+141,M,Maddison,The Feminist Agenda,5,16,False,Liam Hussey,2
+142,M,Bernardo Silva,The Feminist Agenda,2,10,False,Liam Hussey,2
+143,M,Redmond,The Feminist Agenda,2,14,False,Liam Hussey,2
+144,F,Abraham,The Feminist Agenda,1,28,False,Liam Hussey,2
+145,F,Agüero,The Feminist Agenda,6,40,False,Liam Hussey,2
+146,G,Pope,The Feminist Agenda,3,15,True,Liam Hussey,2
+147,M,Townsend,The Feminist Agenda,2,7,True,Liam Hussey,2
+148,F,Batshuayi,The Feminist Agenda,0,1,True,Liam Hussey,2
+149,D,Mendy,The Feminist Agenda,0,0,True,Liam Hussey,2
+150,G,Adrián,best in the west,3,12,False,james west,2
+151,D,Rose,best in the west,1,4,False,james west,2
+152,D,Shaw,best in the west,2,9,False,james west,2
+153,D,van Dijk,best in the west,2,19,False,james west,2
+154,D,Mina,best in the west,7,18,False,james west,2
+155,D,David Luiz,best in the west,1,2,False,james west,2
+156,M,De Bruyne,best in the west,11,36,False,james west,2
+157,M,Pulisic,best in the west,2,13,False,james west,2
+158,F,Wesley,best in the west,2,15,False,james west,2
+159,F,Roberto Firmino,best in the west,8,27,False,james west,2
+160,F,Gabriel Jesus,best in the west,1,7,False,james west,2
+161,M,Sarr,best in the west,0,1,True,james west,2
+162,M,Özil,best in the west,0,0,True,james west,2
+163,M,Walcott,best in the west,1,2,True,james west,2
+164,G,Leno,best in the west,3,14,True,james west,2
+165,G,Ederson Moraes,Heung like Son,3,17,False,Dylan Urquhart,3
+166,D,Söyüncü,Heung like Son,5,15,False,Dylan Urquhart,3
+167,D,Sánchez,Heung like Son,2,5,False,Dylan Urquhart,3
+168,D,Robertson,Heung like Son,2,12,False,Dylan Urquhart,3
+169,D,Coleman,Heung like Son,0,12,False,Dylan Urquhart,3
+170,M,Sterling,Heung like Son,8,37,False,Dylan Urquhart,3
+171,M,Mahrez,Heung like Son,1,19,False,Dylan Urquhart,3
+172,M,Lucas Moura,Heung like Son,2,13,False,Dylan Urquhart,3
+173,M,Son Heung-Min,Heung like Son,2,7,False,Dylan Urquhart,3
+174,F,Pukki,Heung like Son,11,37,False,Dylan Urquhart,3
+175,F,Danny Ings,Heung like Son,5,15,False,Dylan Urquhart,3
+176,F,Wilson,Heung like Son,5,20,True,Dylan Urquhart,3
+177,M,Wilfred Ndidi,Heung like Son,0,15,True,Dylan Urquhart,3
+178,G,Schmeichel,Heung like Son,2,13,True,Dylan Urquhart,3
+179,D,Jonny,Heung like Son,2,9,True,Dylan Urquhart,3
+180,G,Foster,Ol' Cider's Lowry,1,11,False,Matt Lowry,1
+181,D,Alonso,Ol' Cider's Lowry,0,1,False,Matt Lowry,1
+182,D,Gomez,Ol' Cider's Lowry,2,2,False,Matt Lowry,1
+183,D,Walker,Ol' Cider's Lowry,8,16,False,Matt Lowry,1
+184,M,Antonio,Ol' Cider's Lowry,1,6,False,Matt Lowry,1
+185,M,Almirón,Ol' Cider's Lowry,1,8,False,Matt Lowry,1
+186,M,Salah,Ol' Cider's Lowry,12,36,False,Matt Lowry,1
+187,M,Bernard,Ol' Cider's Lowry,2,16,False,Matt Lowry,1
+188,F,Jiménez,Ol' Cider's Lowry,2,18,False,Matt Lowry,1
+189,F,Deulofeu,Ol' Cider's Lowry,1,6,False,Matt Lowry,1
+190,F,Rashford,Ol' Cider's Lowry,13,21,False,Matt Lowry,1
+191,G,Kepa,Ol' Cider's Lowry,0,5,True,Matt Lowry,1
+192,M,Willian,Ol' Cider's Lowry,0,3,True,Matt Lowry,1
+193,D,Vertonghen,Ol' Cider's Lowry,0,1,True,Matt Lowry,1
+194,D,Delph,Ol' Cider's Lowry,0,0,True,Matt Lowry,1
+195,G,Ederson Moraes,Heung like Son,1,17,False,Dylan Urquhart,2
+196,D,Robertson,Heung like Son,2,12,False,Dylan Urquhart,2
+197,D,Holebas,Heung like Son,1,2,False,Dylan Urquhart,2
+198,D,Jonny,Heung like Son,2,9,False,Dylan Urquhart,2
+199,D,Coleman,Heung like Son,5,12,False,Dylan Urquhart,2
+200,M,Sterling,Heung like Son,6,37,False,Dylan Urquhart,2
+201,M,Mahrez,Heung like Son,1,19,False,Dylan Urquhart,2
+202,M,Pereyra,Heung like Son,1,4,False,Dylan Urquhart,2
+203,M,Lucas Moura,Heung like Son,6,13,False,Dylan Urquhart,2
+204,F,Pukki,Heung like Son,17,37,False,Dylan Urquhart,2
+205,F,Wilson,Heung like Son,5,20,False,Dylan Urquhart,2
+206,M,Son Heung-Min,Heung like Son,0,7,True,Dylan Urquhart,2
+207,F,Danny Ings,Heung like Son,6,15,True,Dylan Urquhart,2
+208,G,Schmeichel,Heung like Son,3,13,True,Dylan Urquhart,2
+209,D,Söyüncü,Heung like Son,2,15,True,Dylan Urquhart,2
+210,G,Alisson,Ain't No Holebas Girl,1,1,False,Tom Barratt,1
+211,D,Chilwell,Ain't No Holebas Girl,6,11,False,Tom Barratt,1
+212,D,Boly,Ain't No Holebas Girl,9,16,False,Tom Barratt,1
+213,D,Azpilicueta,Ain't No Holebas Girl,0,7,False,Tom Barratt,1
+214,D,Stones,Ain't No Holebas Girl,6,6,False,Tom Barratt,1
+215,M,Ndombele,Ain't No Holebas Girl,8,14,False,Tom Barratt,1
+216,M,Sigurdsson,Ain't No Holebas Girl,3,13,False,Tom Barratt,1
+217,M,Tielemans,Ain't No Holebas Girl,3,19,False,Tom Barratt,1
+218,M,Mané,Ain't No Holebas Girl,1,25,False,Tom Barratt,1
+219,F,Jota,Ain't No Holebas Girl,2,7,False,Tom Barratt,1
+220,F,Kean,Ain't No Holebas Girl,1,8,False,Tom Barratt,1
+221,F,Joelinton,Ain't No Holebas Girl,2,13,True,Tom Barratt,1
+222,M,Felipe Anderson,Ain't No Holebas Girl,1,9,True,Tom Barratt,1
+223,G,Guaita,Ain't No Holebas Girl,6,15,True,Tom Barratt,1
+224,D,van Aanholt,Ain't No Holebas Girl,6,24,True,Tom Barratt,1
+225,G,Foster,Ol' Cider's Lowry,2,11,False,Matt Lowry,2
+226,D,Alonso,Ol' Cider's Lowry,0,1,False,Matt Lowry,2
+227,D,Gomez,Ol' Cider's Lowry,0,2,False,Matt Lowry,2
+228,D,Walker,Ol' Cider's Lowry,1,16,False,Matt Lowry,2
+229,M,Almirón,Ol' Cider's Lowry,2,8,False,Matt Lowry,2
+230,M,Antonio,Ol' Cider's Lowry,1,6,False,Matt Lowry,2
+231,M,Salah,Ol' Cider's Lowry,3,36,False,Matt Lowry,2
+232,M,Bernard,Ol' Cider's Lowry,11,16,False,Matt Lowry,2
+233,F,Jiménez,Ol' Cider's Lowry,2,18,False,Matt Lowry,2
+234,F,Deulofeu,Ol' Cider's Lowry,2,6,False,Matt Lowry,2
+235,F,Rashford,Ol' Cider's Lowry,6,21,False,Matt Lowry,2
+236,G,Kepa,Ol' Cider's Lowry,2,5,True,Matt Lowry,2
+237,D,Vertonghen,Ol' Cider's Lowry,0,1,True,Matt Lowry,2
+238,M,Willian,Ol' Cider's Lowry,1,3,True,Matt Lowry,2
+239,D,Delph,Ol' Cider's Lowry,0,0,True,Matt Lowry,2
+240,G,Patrício,"Corner taken quickly, ORIGIII!",3,20,False,Liam Fariss,3
+241,D,Emerson,"Corner taken quickly, ORIGIII!",1,4,False,Liam Fariss,3
+242,D,Walker-Peters,"Corner taken quickly, ORIGIII!",2,5,False,Liam Fariss,3
+243,D,Zinchenko,"Corner taken quickly, ORIGIII!",2,15,False,Liam Fariss,3
+244,D,Wan-Bissaka,"Corner taken quickly, ORIGIII!",0,11,False,Liam Fariss,3
+245,M,Martial,"Corner taken quickly, ORIGIII!",5,19,False,Liam Fariss,3
+246,M,Richarlison,"Corner taken quickly, ORIGIII!",2,23,False,Liam Fariss,3
+247,M,Lanzini,"Corner taken quickly, ORIGIII!",5,18,False,Liam Fariss,3
+248,M,Trossard,"Corner taken quickly, ORIGIII!",2,11,False,Liam Fariss,3
+249,F,Haller,"Corner taken quickly, ORIGIII!",13,23,False,Liam Fariss,3
+250,F,Lacazette,"Corner taken quickly, ORIGIII!",1,14,False,Liam Fariss,3
+251,G,Fabianski,"Corner taken quickly, ORIGIII!",2,13,True,Liam Fariss,3
+252,M,Dele Alli,"Corner taken quickly, ORIGIII!",0,1,True,Liam Fariss,3
+253,M,Pépé,"Corner taken quickly, ORIGIII!",2,9,True,Liam Fariss,3
+254,D,Ritchie,"Corner taken quickly, ORIGIII!",5,8,True,Liam Fariss,3
+255,G,Lloris,Wizards of Ozil,3,11,False,Peter Allan,1
+256,D,Alderweireld,Wizards of Ozil,2,6,False,Peter Allan,1
+257,D,Aké,Wizards of Ozil,2,5,False,Peter Allan,1
+258,D,Alexander-Arnold,Wizards of Ozil,5,22,False,Peter Allan,1
+259,M,Doucouré,Wizards of Ozil,0,5,False,Peter Allan,1
+260,M,Pedro,Wizards of Ozil,2,4,False,Peter Allan,1
+261,M,Zaha,Wizards of Ozil,1,7,False,Peter Allan,1
+262,M,Eriksen,Wizards of Ozil,1,12,False,Peter Allan,1
+263,M,Ayoze Pérez,Wizards of Ozil,3,7,False,Peter Allan,1
+264,F,King,Wizards of Ozil,2,12,False,Peter Allan,1
+265,F,Aubameyang,Wizards of Ozil,6,26,False,Peter Allan,1
+266,M,Iwobi,Wizards of Ozil,0,10,True,Peter Allan,1
+267,G,Dubravka,Wizards of Ozil,2,13,True,Peter Allan,1
+268,F,Murray,Wizards of Ozil,2,6,True,Peter Allan,1
+269,D,Lindelöf,Wizards of Ozil,5,10,True,Peter Allan,1
+270,G,Dubravka,Wizards of Ozil,3,13,False,Peter Allan,4
+271,D,Alexander-Arnold,Wizards of Ozil,11,22,False,Peter Allan,4
+272,D,Lindelöf,Wizards of Ozil,2,10,False,Peter Allan,4
+273,D,Keane,Wizards of Ozil,1,16,False,Peter Allan,4
+274,M,Cantwell,Wizards of Ozil,2,21,False,Peter Allan,4
+275,M,Zaha,Wizards of Ozil,3,7,False,Peter Allan,4
+276,M,McGinn,Wizards of Ozil,2,17,False,Peter Allan,4
+277,M,Eriksen,Wizards of Ozil,8,12,False,Peter Allan,4
+278,F,King,Wizards of Ozil,2,12,False,Peter Allan,4
+279,F,Barnes,Wizards of Ozil,2,27,False,Peter Allan,4
+280,F,Aubameyang,Wizards of Ozil,9,26,False,Peter Allan,4
+281,D,O'Connell,Wizards of Ozil,1,10,True,Peter Allan,4
+282,G,Lloris,Wizards of Ozil,3,11,True,Peter Allan,4
+283,D,Alderweireld,Wizards of Ozil,1,6,True,Peter Allan,4
+284,M,Pedro,Wizards of Ozil,0,4,True,Peter Allan,4
+285,G,Patrício,"Corner taken quickly, ORIGIII!",6,20,False,Liam Fariss,1
+286,D,Emerson,"Corner taken quickly, ORIGIII!",0,4,False,Liam Fariss,1
+287,D,Walker-Peters,"Corner taken quickly, ORIGIII!",2,5,False,Liam Fariss,1
+288,D,Zinchenko,"Corner taken quickly, ORIGIII!",6,15,False,Liam Fariss,1
+289,D,Wan-Bissaka,"Corner taken quickly, ORIGIII!",8,11,False,Liam Fariss,1
+290,M,Martial,"Corner taken quickly, ORIGIII!",7,19,False,Liam Fariss,1
+291,M,Pépé,"Corner taken quickly, ORIGIII!",1,9,False,Liam Fariss,1
+292,M,Richarlison,"Corner taken quickly, ORIGIII!",3,23,False,Liam Fariss,1
+293,M,Lamela,"Corner taken quickly, ORIGIII!",1,18,False,Liam Fariss,1
+294,M,Barkley,"Corner taken quickly, ORIGIII!",1,4,False,Liam Fariss,1
+295,F,Haller,"Corner taken quickly, ORIGIII!",2,23,False,Liam Fariss,1
+296,G,Fabianski,"Corner taken quickly, ORIGIII!",1,13,True,Liam Fariss,1
+297,F,Lacazette,"Corner taken quickly, ORIGIII!",0,14,True,Liam Fariss,1
+298,M,Dele Alli,"Corner taken quickly, ORIGIII!",0,1,True,Liam Fariss,1
+299,D,Ritchie,"Corner taken quickly, ORIGIII!",2,8,True,Liam Fariss,1
+300,G,Guaita,Ain't No Holebas Girl,6,15,False,Tom Barratt,4
+301,D,Chilwell,Ain't No Holebas Girl,5,11,False,Tom Barratt,4
+302,D,Boly,Ain't No Holebas Girl,1,16,False,Tom Barratt,4
+303,D,Azpilicueta,Ain't No Holebas Girl,1,7,False,Tom Barratt,4
+304,M,Sigurdsson,Ain't No Holebas Girl,5,13,False,Tom Barratt,4
+305,M,Tielemans,Ain't No Holebas Girl,12,19,False,Tom Barratt,4
+306,M,Felipe Anderson,Ain't No Holebas Girl,3,9,False,Tom Barratt,4
+307,M,Mané,Ain't No Holebas Girl,8,25,False,Tom Barratt,4
+308,F,Kean,Ain't No Holebas Girl,5,8,False,Tom Barratt,4
+309,F,Joelinton,Ain't No Holebas Girl,2,13,False,Tom Barratt,4
+310,F,Jota,Ain't No Holebas Girl,1,7,False,Tom Barratt,4
+311,D,Lundstram,Ain't No Holebas Girl,1,18,True,Tom Barratt,4
+312,G,Alisson,Ain't No Holebas Girl,0,1,True,Tom Barratt,4
+313,D,Stones,Ain't No Holebas Girl,0,6,True,Tom Barratt,4
+314,M,Ndombele,Ain't No Holebas Girl,0,14,True,Tom Barratt,4
+315,G,Ederson Moraes,Heung like Son,6,17,False,Dylan Urquhart,4
+316,D,Söyüncü,Heung like Son,2,15,False,Dylan Urquhart,4
+317,D,Robertson,Heung like Son,6,12,False,Dylan Urquhart,4
+318,D,Coleman,Heung like Son,1,12,False,Dylan Urquhart,4
+319,M,Sterling,Heung like Son,3,37,False,Dylan Urquhart,4
+320,M,Mahrez,Heung like Son,3,19,False,Dylan Urquhart,4
+321,M,Wilfred Ndidi,Heung like Son,2,15,False,Dylan Urquhart,4
+322,M,Son Heung-Min,Heung like Son,5,7,False,Dylan Urquhart,4
+323,F,Pukki,Heung like Son,2,37,False,Dylan Urquhart,4
+324,F,Wilson,Heung like Son,5,20,False,Dylan Urquhart,4
+325,F,Danny Ings,Heung like Son,2,15,False,Dylan Urquhart,4
+326,M,Lucas Moura,Heung like Son,0,13,True,Dylan Urquhart,4
+327,D,Jonny,Heung like Son,0,9,True,Dylan Urquhart,4
+328,G,Schmeichel,Heung like Son,2,13,True,Dylan Urquhart,4
+329,D,Sánchez,Heung like Son,0,5,True,Dylan Urquhart,4
+330,G,Kepa,Ol' Cider's Lowry,1,5,False,Matt Lowry,4
+331,D,Otamendi,Ol' Cider's Lowry,6,8,False,Matt Lowry,4
+332,D,Walker,Ol' Cider's Lowry,6,16,False,Matt Lowry,4
+333,D,Maitland-Niles,Ol' Cider's Lowry,1,16,False,Matt Lowry,4
+334,M,Mount,Ol' Cider's Lowry,2,22,False,Matt Lowry,4
+335,M,Salah,Ol' Cider's Lowry,6,36,False,Matt Lowry,4
+336,M,Almirón,Ol' Cider's Lowry,2,8,False,Matt Lowry,4
+337,M,Bernard,Ol' Cider's Lowry,1,16,False,Matt Lowry,4
+338,F,Jiménez,Ol' Cider's Lowry,5,18,False,Matt Lowry,4
+339,F,Deulofeu,Ol' Cider's Lowry,1,6,False,Matt Lowry,4
+340,F,Rashford,Ol' Cider's Lowry,2,21,False,Matt Lowry,4
+341,D,Alonso,Ol' Cider's Lowry,0,1,True,Matt Lowry,4
+342,D,Gomez,Ol' Cider's Lowry,0,2,True,Matt Lowry,4
+343,G,Foster,Ol' Cider's Lowry,5,11,True,Matt Lowry,4
+344,M,Antonio,Ol' Cider's Lowry,0,6,True,Matt Lowry,4
+345,G,de Gea,Chopporoos,2,15,False,Dominic Drewery,2
+346,D,Maguire,Chopporoos,2,10,False,Dominic Drewery,2
+347,D,Laporte,Chopporoos,1,9,False,Dominic Drewery,2
+348,D,Zouma,Chopporoos,2,1,False,Dominic Drewery,2
+349,M,Ceballos,Chopporoos,11,15,False,Dominic Drewery,2
+350,M,Grealish,Chopporoos,6,12,False,Dominic Drewery,2
+351,M,Fraser,Chopporoos,2,11,False,Dominic Drewery,2
+352,M,Silva,Chopporoos,1,24,False,Dominic Drewery,2
+353,M,Robinson,Chopporoos,1,15,False,Dominic Drewery,2
+354,F,Vardy,Chopporoos,2,28,False,Dominic Drewery,2
+355,F,Kane,Chopporoos,2,23,False,Dominic Drewery,2
+356,D,Doherty,Chopporoos,1,9,True,Dominic Drewery,2
+357,D,Cancelo,Chopporoos,0,1,True,Dominic Drewery,2
+358,G,Mat Ryan,Chopporoos,2,12,True,Dominic Drewery,2
+359,M,Lo Celso,Chopporoos,1,3,True,Dominic Drewery,2
+360,G,de Gea,Chopporoos,1,15,False,Dominic Drewery,3
+361,D,Doherty,Chopporoos,2,9,False,Dominic Drewery,3
+362,D,Maguire,Chopporoos,1,10,False,Dominic Drewery,3
+363,D,Laporte,Chopporoos,2,9,False,Dominic Drewery,3
+364,M,Grealish,Chopporoos,3,12,False,Dominic Drewery,3
+365,M,Ceballos,Chopporoos,2,15,False,Dominic Drewery,3
+366,M,Fraser,Chopporoos,2,11,False,Dominic Drewery,3
+367,M,Silva,Chopporoos,10,24,False,Dominic Drewery,3
+368,M,Lamela,Chopporoos,2,18,False,Dominic Drewery,3
+369,F,Vardy,Chopporoos,8,28,False,Dominic Drewery,3
+370,F,Kane,Chopporoos,2,23,False,Dominic Drewery,3
+371,D,Cancelo,Chopporoos,1,1,True,Dominic Drewery,3
+372,M,Lo Celso,Chopporoos,1,3,True,Dominic Drewery,3
+373,G,Mat Ryan,Chopporoos,1,12,True,Dominic Drewery,3
+374,D,Rüdiger,Chopporoos,0,0,True,Dominic Drewery,3
+375,G,Lloris,Wizards of Ozil,2,11,False,Peter Allan,3
+376,D,Alderweireld,Wizards of Ozil,2,6,False,Peter Allan,3
+377,D,O'Connell,Wizards of Ozil,1,10,False,Peter Allan,3
+378,D,Alexander-Arnold,Wizards of Ozil,5,22,False,Peter Allan,3
+379,D,Lindelöf,Wizards of Ozil,1,10,False,Peter Allan,3
+380,M,McGinn,Wizards of Ozil,6,17,False,Peter Allan,3
+381,M,Zaha,Wizards of Ozil,1,7,False,Peter Allan,3
+382,M,Eriksen,Wizards of Ozil,1,12,False,Peter Allan,3
+383,F,King,Wizards of Ozil,2,12,False,Peter Allan,3
+384,F,Murray,Wizards of Ozil,1,6,False,Peter Allan,3
+385,F,Aubameyang,Wizards of Ozil,5,26,False,Peter Allan,3
+386,M,Pedro,Wizards of Ozil,0,4,True,Peter Allan,3
+387,F,Barnes,Wizards of Ozil,7,27,True,Peter Allan,3
+388,G,Dubravka,Wizards of Ozil,6,13,True,Peter Allan,3
+389,D,Aké,Wizards of Ozil,1,5,True,Peter Allan,3
+390,G,Gunn,Ain't No Holebas Girl,7,15,False,Tom Barratt,3
+391,D,Lundstram,Ain't No Holebas Girl,0,18,False,Tom Barratt,3
+392,D,Boly,Ain't No Holebas Girl,4,16,False,Tom Barratt,3
+393,D,Azpilicueta,Ain't No Holebas Girl,4,7,False,Tom Barratt,3
+394,M,Sigurdsson,Ain't No Holebas Girl,2,13,False,Tom Barratt,3
+395,M,Tielemans,Ain't No Holebas Girl,2,19,False,Tom Barratt,3
+396,M,Felipe Anderson,Ain't No Holebas Girl,5,9,False,Tom Barratt,3
+397,M,Mané,Ain't No Holebas Girl,3,25,False,Tom Barratt,3
+398,F,Joelinton,Ain't No Holebas Girl,8,13,False,Tom Barratt,3
+399,F,Jota,Ain't No Holebas Girl,2,7,False,Tom Barratt,3
+400,F,Kean,Ain't No Holebas Girl,1,8,False,Tom Barratt,3
+401,D,Chilwell,Ain't No Holebas Girl,0,11,True,Tom Barratt,3
+402,D,Stones,Ain't No Holebas Girl,0,6,True,Tom Barratt,3
+403,G,Alisson,Ain't No Holebas Girl,0,1,True,Tom Barratt,3
+404,M,Ndombele,Ain't No Holebas Girl,0,14,True,Tom Barratt,3
+405,G,de Gea,Chopporoos,10,15,False,Dominic Drewery,1
+406,D,Maguire,Chopporoos,6,10,False,Dominic Drewery,1
+407,D,Laporte,Chopporoos,6,9,False,Dominic Drewery,1
+408,D,Doherty,Chopporoos,6,9,False,Dominic Drewery,1
+409,M,Grealish,Chopporoos,2,12,False,Dominic Drewery,1
+410,M,Fraser,Chopporoos,1,11,False,Dominic Drewery,1
+411,M,Fornals,Chopporoos,1,5,False,Dominic Drewery,1
+412,M,Silva,Chopporoos,3,24,False,Dominic Drewery,1
+413,F,Wood,Chopporoos,2,6,False,Dominic Drewery,1
+414,F,Vardy,Chopporoos,2,28,False,Dominic Drewery,1
+415,F,Kane,Chopporoos,13,23,False,Dominic Drewery,1
+416,D,Matip,Chopporoos,0,17,True,Dominic Drewery,1
+417,M,Ceballos,Chopporoos,1,15,True,Dominic Drewery,1
+418,G,Mat Ryan,Chopporoos,9,12,True,Dominic Drewery,1
+419,D,Zouma,Chopporoos,-1,1,True,Dominic Drewery,1
+420,G,Dubravka,Wizards of Ozil,2,13,False,Peter Allan,2
+421,D,Aké,Wizards of Ozil,1,5,False,Peter Allan,2
+422,D,Alexander-Arnold,Wizards of Ozil,1,22,False,Peter Allan,2
+423,D,Lindelöf,Wizards of Ozil,2,10,False,Peter Allan,2
+424,D,Maitland-Niles,Wizards of Ozil,2,16,False,Peter Allan,2
+425,M,Pedro,Wizards of Ozil,2,4,False,Peter Allan,2
+426,M,Zaha,Wizards of Ozil,2,7,False,Peter Allan,2
+427,M,Eriksen,Wizards of Ozil,2,12,False,Peter Allan,2
+428,F,King,Wizards of Ozil,6,12,False,Peter Allan,2
+429,F,Murray,Wizards of Ozil,2,6,False,Peter Allan,2
+430,F,Aubameyang,Wizards of Ozil,6,26,False,Peter Allan,2
+431,D,Alderweireld,Wizards of Ozil,1,6,True,Peter Allan,2
+432,G,Lloris,Wizards of Ozil,3,11,True,Peter Allan,2
+433,M,Iwobi,Wizards of Ozil,0,10,True,Peter Allan,2
+434,M,Ayoze Pérez,Wizards of Ozil,2,7,True,Peter Allan,2
+435,G,Patrício,"Corner taken quickly, ORIGIII!",9,20,False,Liam Fariss,2
+436,D,Emerson,"Corner taken quickly, ORIGIII!",2,4,False,Liam Fariss,2
+437,D,Walker-Peters,"Corner taken quickly, ORIGIII!",1,5,False,Liam Fariss,2
+438,D,Zinchenko,"Corner taken quickly, ORIGIII!",1,15,False,Liam Fariss,2
+439,D,Wan-Bissaka,"Corner taken quickly, ORIGIII!",1,11,False,Liam Fariss,2
+440,D,Ritchie,"Corner taken quickly, ORIGIII!",1,8,False,Liam Fariss,2
+441,M,Martial,"Corner taken quickly, ORIGIII!",7,19,False,Liam Fariss,2
+442,M,Pépé,"Corner taken quickly, ORIGIII!",1,9,False,Liam Fariss,2
+443,M,Richarlison,"Corner taken quickly, ORIGIII!",3,23,False,Liam Fariss,2
+444,M,Groß,"Corner taken quickly, ORIGIII!",3,11,False,Liam Fariss,2
+445,F,Lacazette,"Corner taken quickly, ORIGIII!",8,14,False,Liam Fariss,2
+446,G,Fabianski,"Corner taken quickly, ORIGIII!",3,13,True,Liam Fariss,2
+447,M,Barkley,"Corner taken quickly, ORIGIII!",0,4,True,Liam Fariss,2
+448,M,Dele Alli,"Corner taken quickly, ORIGIII!",0,1,True,Liam Fariss,2
+449,F,Haller,"Corner taken quickly, ORIGIII!",0,23,True,Liam Fariss,2
+450,G,Leno,best in the west,7,14,False,james west,1
+451,D,Shaw,best in the west,6,9,False,james west,1
+452,D,van Dijk,best in the west,8,19,False,james west,1
+453,D,Rose,best in the west,2,4,False,james west,1
+454,D,Mina,best in the west,9,18,False,james west,1
+455,M,Mkhitaryan,best in the west,2,4,False,james west,1
+456,M,De Bruyne,best in the west,7,36,False,james west,1
+457,M,Pulisic,best in the west,1,13,False,james west,1
+458,F,Roberto Firmino,best in the west,5,27,False,james west,1
+459,F,Wesley,best in the west,2,15,False,james west,1
+460,F,Gabriel Jesus,best in the west,6,7,False,james west,1
+461,G,Heaton,best in the west,2,12,True,james west,1
+462,M,Walcott,best in the west,0,2,True,james west,1
+463,M,Özil,best in the west,0,0,True,james west,1
+464,D,David Luiz,best in the west,0,2,True,james west,1
+465,G,Pickford,The Feminist Agenda,7,16,False,Liam Hussey,1
+466,D,Pereira,The Feminist Agenda,9,15,False,Liam Hussey,1
+467,D,Digne,The Feminist Agenda,6,23,False,Liam Hussey,1
+468,D,Keane,The Feminist Agenda,8,16,False,Liam Hussey,1
+469,M,Pogba,The Feminist Agenda,9,13,False,Liam Hussey,1
+470,M,Townsend,The Feminist Agenda,3,7,False,Liam Hussey,1
+471,M,Maddison,The Feminist Agenda,3,16,False,Liam Hussey,1
+472,M,Milivojevic,The Feminist Agenda,2,7,False,Liam Hussey,1
+473,M,Redmond,The Feminist Agenda,2,14,False,Liam Hussey,1
+474,F,Abraham,The Feminist Agenda,1,28,False,Liam Hussey,1
+475,F,Agüero,The Feminist Agenda,5,40,False,Liam Hussey,1
+476,G,Pope,The Feminist Agenda,8,15,True,Liam Hussey,1
+477,M,Bernardo Silva,The Feminist Agenda,0,10,True,Liam Hussey,1
+478,F,Batshuayi,The Feminist Agenda,0,1,True,Liam Hussey,1
+479,D,Mendy,The Feminist Agenda,0,0,True,Liam Hussey,1
