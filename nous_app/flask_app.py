@@ -102,5 +102,5 @@ def novel():
 #tab8 = novelty7.novelty7(df_pl_past, df_team_info, df_pl_players, dict_owners)
 
 
-#if __name__ == "__main__":
-#    app.run(port=5000, debug=True)
+if __name__ == "__main__":
+	app.run(host='0.0.0.0')

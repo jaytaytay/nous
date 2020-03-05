@@ -77,7 +77,7 @@ def make_plot(df_single_lines):
     for owner in set(df_single_lines['Owner']):
         src = ColumnDataSource(df_single_lines[df_single_lines['Owner'] == owner])
         p.circle('Gameweek', 'Score', source=src, alpha='fill_alpha', size='size', color = 'owner_color', 
-                 legend = owner, muted_color='owner_color', muted_alpha=0.4, name=owner)
+                 legend_label = owner, muted_color='owner_color', muted_alpha=0.4, name=owner)
 
     src = ColumnDataSource(df_single_lines)
     hover = HoverTool(names=list(df_single_lines['Owner'].unique()),
