@@ -8,7 +8,7 @@ Created on Thu Aug  8 18:01:10 2019
 
 import os
 
-path            = os.path.join(os.getcwd(), 'nous')
+path            = os.path.join(os.getcwd())
 
 #import sys
 

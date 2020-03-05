@@ -3,7 +3,7 @@
 #     Import stuff
 # -----------------------------------------
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from bokeh.embed import server_document, components
 
 import pandas as pd
@@ -74,11 +74,11 @@ def index():
     # -----------------------------------------
 
 #    1. Highest Round Team Score (excluding double game-weeks).
-@app.route.("novelty") #("/melmac/2019-20/novelty_1")
-def novelty1(df_single_lines):
-	plot = novelty1.novelty1(df_single_lines)
+@app.route("/novel") #("/melmac/2019-20/novelty_1")
+def novel():
+	plot = novelty1.make_plot(df_single_lines)
 	script, div = components(plot)
-	return render_template("/melmac/2019-20/novelty_1.html", the_div=div, the_script=script) # need to make this template
+	return render_template("/melmac/2019-20/novelty_1.html", the_div=div, the_script=script)
 
 #    2 Highest 1-Game Player Score (Can be 1 game from a double game-week).
 #tab2 = novelty2.novelty2(df_novelty_2)
@@ -103,4 +103,4 @@ def novelty1(df_single_lines):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(port=5000, debug=True)
