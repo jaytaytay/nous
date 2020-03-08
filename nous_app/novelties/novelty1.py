@@ -15,7 +15,6 @@ Created on Thu Jan  3 12:14:42 2019
 # ==============================================================================
 
 import pandas as pd
-#import os
 import numpy as np
 
 from bokeh.plotting import figure

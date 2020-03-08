@@ -199,5 +199,5 @@ def novelty7(df_pl_past, df_team_info, df_pl_players, dict_owners):
     layout = column(p, table)
     
     # Make a tab with the layout 
-    tab = Panel(child=layout, title = 'Novelty 7')
-    return tab
+    #tab = Panel(child=layout, title = 'Novelty 7')
+    return layout
