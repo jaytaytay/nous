@@ -98,6 +98,6 @@ def novelty6(df_single_lines):
     table = make_plot(df_table)
     
     # Make a tab with the layout 
-    tab = Panel(child=table, title = 'Novelty 6')
-    return tab
+#    tab = Panel(child=table, title = 'Novelty 6')
+    return table
 
