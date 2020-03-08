@@ -29,7 +29,7 @@ import os
 
 import pickle
 
-import config_file as config
+import config
 
 base_url        = "https://fantasy.premierleague.com/api/"
 url_bs_static   = "bootstrap-static/"
@@ -40,13 +40,13 @@ url_bs_static   = "bootstrap-static/"
 def get_players_info():
     r = requests.get(base_url + url_bs_static)
     jsonResponse = r.json()
-    with open(file_player_info, 'w') as outfile:
+    with open(path_player_info, 'w') as outfile:
         json.dump(jsonResponse, outfile)
 
 
 # read player info from the json file that we downlaoded
 def get_all_players_detailed_json():
-    with open(file_player_info) as json_data:
+    with open(path_player_info) as json_data:
         d = json.load(json_data)
         return d
     
@@ -153,14 +153,14 @@ def get_all_players_detailed_json():
     df_past = df_past.sort_values(by='kickoff_time')
 
     # export
-    df_past.to_csv('/Users/JohnTaylor/Dropbox/Public/kyso/pl_past.csv')
-    df_future.to_csv('/Users/JohnTaylor/Dropbox/Public/kyso/pl_future.csv')
-    df_player_stats.to_csv('/Users/JohnTaylor/Dropbox/Public/kyso/pl_players.csv')
-    df_fixtures.to_csv('/Users/JohnTaylor/Dropbox/Public/kyso/pl_fixtures.csv')
-    df_team_data.to_csv('/Users/JohnTaylor/Dropbox/Public/kyso/pl_teams.csv')
+    df_past.to_csv(config.path_pl_past)
+    df_future.to_csv(config.path_pl_future)
+    df_player_stats.to_csv(config.path_pl_players)
+    df_fixtures.to_csv(config.path_pl_fixtures)
+    df_team_data.to_csv(config.path_pl_teams)
     
-    pickle.dump(df_player_stats, open(config.path_latest_player_stats_pickle_write, "wb"))
-    pickle.dump(df_player_stats, open('/Users/JohnTaylor/Dropbox/Public/kyso/latest_player_stats.p', "wb"))
-
-    pickle.dump(list_all_players, open(config.path_latest_player_gw_stats_pickle_write, "wb"))
-    pickle.dump(list_all_players, open('/Users/JohnTaylor/Dropbox/Public/kyso/latest_player_gw_stats.p', "wb"))
+#    pickle.dump(df_player_stats, open(config.path_latest_player_stats_pickle_write, "wb"))
+#    pickle.dump(df_player_stats, open('/Users/JohnTaylor/Dropbox/Public/kyso/latest_player_stats.p', "wb"))
+#
+#    pickle.dump(list_all_players, open(config.path_latest_player_gw_stats_pickle_write, "wb"))
+#    pickle.dump(list_all_players, open('/Users/JohnTaylor/Dropbox/Public/kyso/latest_player_gw_stats.p', "wb"))
