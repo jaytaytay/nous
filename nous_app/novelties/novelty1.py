@@ -21,7 +21,7 @@ import numpy as np
 from bokeh.plotting import figure
 from bokeh.models import Range1d, HoverTool, ColumnDataSource, Panel, CrosshairTool, Title
 
-from nous_app import app
+# from nous_app import app
 
 # Styling for plot
 def style(p):
