@@ -11,13 +11,13 @@ import pandas as pd
 import sys
 import os
 
-import novelties.novelty1 as novelty1
-import novelties.novelty2 as novelty2
-import novelties.novelty3 as novelty3
-import novelties.novelty4 as novelty4
-import novelties.novelty5 as novelty5
-import novelties.novelty6 as novelty6
-import novelties.novelty7 as novelty7
+from nous_app.novelties import novelty1 as novelty1
+#import novelties.novelty2 as novelty2
+#import novelties.novelty3 as novelty3
+#import novelties.novelty4 as novelty4
+#import novelties.novelty5 as novelty5
+#import novelties.novelty6 as novelty6
+#import novelties.novelty7 as novelty7
 
 import config
 
