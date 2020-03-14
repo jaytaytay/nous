@@ -3,31 +3,231 @@
 1,9.0,Rui Pedro dos Santos Patrício,2.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
 2,13.0,Sébastien Haller,3.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
 3,15.0,Richarlison de Andrade,4.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
-4,6.0,Pierre-Emerick Aubameyang,1.0,Peter Allan,Wizards of Ozil,#c73b32
-5,6.0,Joshua King,2.0,Peter Allan,Wizards of Ozil,#c73b32
-6,7.0,Ashley Barnes,3.0,Peter Allan,Wizards of Ozil,#c73b32
-7,11.0,Trent Alexander-Arnold,4.0,Peter Allan,Wizards of Ozil,#c73b32
-8,9.0,Ricardo Domingos Barbosa Pereira,1.0,Liam Hussey,The Feminist Agenda,#995f3d
-9,11.0,Lucas Digne,2.0,Liam Hussey,The Feminist Agenda,#995f3d
-10,13.0,Sergio Agüero,3.0,Liam Hussey,The Feminist Agenda,#995f3d
-11,16.0,Sergio Agüero,4.0,Liam Hussey,The Feminist Agenda,#995f3d
-12,9.0,Yerry Mina,1.0,james west,best in the west,#ffb400
-13,11.0,Kevin De Bruyne,2.0,james west,best in the west,#ffb400
-14,9.0,Wesley Moraes,3.0,james west,best in the west,#ffb400
-15,13.0,Kevin De Bruyne,4.0,james west,best in the west,#ffb400
-16,13.0,Marcus Rashford,1.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
-17,11.0,Bernard Anício Caldeira Duarte,2.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
-18,15.0,Mohamed Salah,3.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
-19,6.0,Nicolás Otamendi,4.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
-20,13.0,Harry Kane,1.0,Dominic Drewery,Chopporoos,#1e2832
-21,11.0,Daniel Ceballos Fernández,2.0,Dominic Drewery,Chopporoos,#1e2832
-22,10.0,David Silva,3.0,Dominic Drewery,Chopporoos,#1e2832
-23,16.0,Jamie Vardy,4.0,Dominic Drewery,Chopporoos,#1e2832
-24,9.0,Willy Boly,1.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
-25,13.0,Sadio Mané,2.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
-26,8.0,Joelinton Cássio Apolinário de Lira,3.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
-27,12.0,Youri Tielemans,4.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
-28,20.0,Raheem Sterling,1.0,Dylan Urquhart,Heung like Son,#cc66cc
-29,17.0,Teemu Pukki,2.0,Dylan Urquhart,Heung like Son,#cc66cc
-30,11.0,Teemu Pukki,3.0,Dylan Urquhart,Heung like Son,#cc66cc
-31,6.0,Ederson Santana de Moraes,4.0,Dylan Urquhart,Heung like Son,#cc66cc
+4,10.0,Lukasz Fabianski,5.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
+5,8.0,Lukasz Fabianski,6.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
+6,9.0,Rui Pedro dos Santos Patrício,7.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
+7,6.0,Rui Pedro dos Santos Patrício,8.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
+8,7.0,Gabriel Fernando de Jesus,9.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
+9,6.0,Çaglar Söyüncü,10.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
+10,14.0,Çaglar Söyüncü,11.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
+11,10.0,Anthony Martial,12.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
+12,12.0,Alexandre Lacazette,13.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
+13,15.0,Bamidele Alli,14.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
+14,13.0,Gabriel Fernando de Jesus,15.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
+15,12.0,Nicolas Pépé,16.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
+16,9.0,Sébastien Haller,17.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
+17,8.0,Jack Grealish,18.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
+18,15.0,Anthony Martial,19.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
+19,8.0,Lewis Dunk,20.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
+20,13.0,Jack Grealish,21.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
+21,10.0,Richarlison de Andrade,22.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
+22,10.0,Jack Grealish,23.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
+23,11.0,Jordan Henderson,24.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
+24,18.0,Robert Snodgrass,25.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
+25,17.0,Nicolas Pépé,26.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
+26,8.0,Anthony Martial,27.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
+27,9.0,Sébastien Haller,28.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
+28,8.0,Anthony Martial,29.0,Liam Fariss,"Corner taken quickly, ORIGIII!",#32b4ff
+29,9.0,Andreas Pereira,1.0,Liam Hussey,The Feminist Agenda,#995f3d
+30,11.0,Lucas Digne,2.0,Liam Hussey,The Feminist Agenda,#995f3d
+31,13.0,Sergio Agüero,3.0,Liam Hussey,The Feminist Agenda,#995f3d
+32,16.0,Sergio Agüero,4.0,Liam Hussey,The Feminist Agenda,#995f3d
+33,14.0,Tammy Abraham,5.0,Liam Hussey,The Feminist Agenda,#995f3d
+34,19.0,Bernardo Mota Veiga de Carvalho e Silva,6.0,Liam Hussey,The Feminist Agenda,#995f3d
+35,13.0,Andreas Pereira,7.0,Liam Hussey,The Feminist Agenda,#995f3d
+36,8.0,Tammy Abraham,8.0,Liam Hussey,The Feminist Agenda,#995f3d
+37,8.0,Jordan Pickford,9.0,Liam Hussey,The Feminist Agenda,#995f3d
+38,10.0,Luka Milivojevic,10.0,Liam Hussey,The Feminist Agenda,#995f3d
+39,12.0,Tammy Abraham,11.0,Liam Hussey,The Feminist Agenda,#995f3d
+40,10.0,Bernardo Mota Veiga de Carvalho e Silva,12.0,Liam Hussey,The Feminist Agenda,#995f3d
+41,9.0,Nick Pope,13.0,Liam Hussey,The Feminist Agenda,#995f3d
+42,10.0,Matt Doherty,14.0,Liam Hussey,The Feminist Agenda,#995f3d
+43,12.0,Jonny Evans,15.0,Liam Hussey,The Feminist Agenda,#995f3d
+44,9.0,James Maddison,16.0,Liam Hussey,The Feminist Agenda,#995f3d
+45,6.0,Nick Pope,17.0,Liam Hussey,The Feminist Agenda,#995f3d
+46,9.0,Lucas Digne,18.0,Liam Hussey,The Feminist Agenda,#995f3d
+47,8.0,Matt Doherty,19.0,Liam Hussey,The Feminist Agenda,#995f3d
+48,8.0,Sergio Agüero,20.0,Liam Hussey,The Feminist Agenda,#995f3d
+49,11.0,James Maddison,21.0,Liam Hussey,The Feminist Agenda,#995f3d
+50,12.0,Lucas Digne,22.0,Liam Hussey,The Feminist Agenda,#995f3d
+51,12.0,Nick Pope,23.0,Liam Hussey,The Feminist Agenda,#995f3d
+52,13.0,Bamidele Alli,24.0,Liam Hussey,The Feminist Agenda,#995f3d
+53,6.0,Matt Doherty,25.0,Liam Hussey,The Feminist Agenda,#995f3d
+54,9.0,Jonny Evans,26.0,Liam Hussey,The Feminist Agenda,#995f3d
+55,14.0,Bruno Miguel Borges Fernandes,27.0,Liam Hussey,The Feminist Agenda,#995f3d
+56,12.0,Matt Doherty,28.0,Liam Hussey,The Feminist Agenda,#995f3d
+57,7.0,Bamidele Alli,29.0,Liam Hussey,The Feminist Agenda,#995f3d
+58,9.0,Yerry Mina,1.0,james west,best in the west,#ffb400
+59,11.0,Kevin De Bruyne,2.0,james west,best in the west,#ffb400
+60,9.0,Wesley Moraes,3.0,james west,best in the west,#ffb400
+61,13.0,Kevin De Bruyne,4.0,james west,best in the west,#ffb400
+62,8.0,Erik Lamela,5.0,james west,best in the west,#ffb400
+63,17.0,Kevin De Bruyne,6.0,james west,best in the west,#ffb400
+64,9.0,Kevin De Bruyne,7.0,james west,best in the west,#ffb400
+65,6.0,Bernd Leno,8.0,james west,best in the west,#ffb400
+66,12.0,Daryl Janmaat,9.0,james west,best in the west,#ffb400
+67,8.0,Aaron Ramsdale,10.0,james west,best in the west,#ffb400
+68,9.0,Aaron Ramsdale,11.0,james west,best in the west,#ffb400
+69,8.0,Andreas Pereira,12.0,james west,best in the west,#ffb400
+70,17.0,James Tarkowski,13.0,james west,best in the west,#ffb400
+71,17.0,Virgil van Dijk,14.0,james west,best in the west,#ffb400
+72,8.0,João Filipe Iria Santos Moutinho,15.0,james west,best in the west,#ffb400
+73,10.0,Vicente Guaita,16.0,james west,best in the west,#ffb400
+74,19.0,Kevin De Bruyne,17.0,james west,best in the west,#ffb400
+75,6.0,James Tarkowski,18.0,james west,best in the west,#ffb400
+76,13.0,Adama Traoré,19.0,james west,best in the west,#ffb400
+77,14.0,Kevin De Bruyne,20.0,james west,best in the west,#ffb400
+78,7.0,Virgil van Dijk,21.0,james west,best in the west,#ffb400
+79,20.0,Sergio Agüero,22.0,james west,best in the west,#ffb400
+80,13.0,Sergio Agüero,23.0,james west,best in the west,#ffb400
+81,9.0,Troy Deeney,24.0,james west,best in the west,#ffb400
+82,15.0,Yerry Mina,25.0,james west,best in the west,#ffb400
+83,14.0,Kevin De Bruyne,26.0,james west,best in the west,#ffb400
+84,9.0,Georginio Wijnaldum,27.0,james west,best in the west,#ffb400
+85,11.0,Troy Deeney,28.0,james west,best in the west,#ffb400
+86,19.0,Harvey Barnes,29.0,james west,best in the west,#ffb400
+87,6.0,Pierre-Emerick Aubameyang,1.0,Peter Allan,Wizards of Ozil,#c73b32
+88,6.0,Joshua King,2.0,Peter Allan,Wizards of Ozil,#c73b32
+89,7.0,Harvey Barnes,3.0,Peter Allan,Wizards of Ozil,#c73b32
+90,11.0,Trent Alexander-Arnold,4.0,Peter Allan,Wizards of Ozil,#c73b32
+91,13.0,Pierre-Emerick Aubameyang,5.0,Peter Allan,Wizards of Ozil,#c73b32
+92,10.0,John McGinn,6.0,Peter Allan,Wizards of Ozil,#c73b32
+93,12.0,Joshua King,7.0,Peter Allan,Wizards of Ozil,#c73b32
+94,8.0,Martin Dubravka,8.0,Peter Allan,Wizards of Ozil,#c73b32
+95,7.0,Michael Keane,9.0,Peter Allan,Wizards of Ozil,#c73b32
+96,20.0,Ayoze Pérez,10.0,Peter Allan,Wizards of Ozil,#c73b32
+97,8.0,Pierre-Emerick Aubameyang,11.0,Peter Allan,Wizards of Ozil,#c73b32
+98,8.0,Harvey Barnes,12.0,Peter Allan,Wizards of Ozil,#c73b32
+99,8.0,Ayoze Pérez,13.0,Peter Allan,Wizards of Ozil,#c73b32
+100,13.0,Pierre-Emerick Aubameyang,14.0,Peter Allan,Wizards of Ozil,#c73b32
+101,10.0,Martin Dubravka,15.0,Peter Allan,Wizards of Ozil,#c73b32
+102,14.0,George Baldock,16.0,Peter Allan,Wizards of Ozil,#c73b32
+103,8.0,Wilfried Zaha,17.0,Peter Allan,Wizards of Ozil,#c73b32
+104,10.0,Todd Cantwell,18.0,Peter Allan,Wizards of Ozil,#c73b32
+105,24.0,Trent Alexander-Arnold,19.0,Peter Allan,Wizards of Ozil,#c73b32
+106,12.0,Dominic Calvert-Lewin,20.0,Peter Allan,Wizards of Ozil,#c73b32
+107,13.0,Ayoze Pérez,21.0,Peter Allan,Wizards of Ozil,#c73b32
+108,6.0,Trent Alexander-Arnold,22.0,Peter Allan,Wizards of Ozil,#c73b32
+109,14.0,Paulo Gazzaniga,23.0,Peter Allan,Wizards of Ozil,#c73b32
+110,16.0,Jordan Henderson,24.0,Peter Allan,Wizards of Ozil,#c73b32
+111,15.0,Hugo Lloris,25.0,Peter Allan,Wizards of Ozil,#c73b32
+112,11.0,Dominic Calvert-Lewin,26.0,Peter Allan,Wizards of Ozil,#c73b32
+113,13.0,Pierre-Emerick Aubameyang,27.0,Peter Allan,Wizards of Ozil,#c73b32
+114,7.0,Raúl Jiménez,28.0,Peter Allan,Wizards of Ozil,#c73b32
+115,9.0,Victor Lindelöf,29.0,Peter Allan,Wizards of Ozil,#c73b32
+116,20.0,Raheem Sterling,1.0,Dylan Urquhart,Heung like Son,#cc66cc
+117,17.0,Teemu Pukki,2.0,Dylan Urquhart,Heung like Son,#cc66cc
+118,11.0,Teemu Pukki,3.0,Dylan Urquhart,Heung like Son,#cc66cc
+119,6.0,Ederson Santana de Moraes,4.0,Dylan Urquhart,Heung like Son,#cc66cc
+120,16.0,Heung-Min Son,5.0,Dylan Urquhart,Heung like Son,#cc66cc
+121,15.0,Riyad Mahrez,6.0,Dylan Urquhart,Heung like Son,#cc66cc
+122,10.0,Riyad Mahrez,7.0,Dylan Urquhart,Heung like Son,#cc66cc
+123,9.0,Patrick van Aanholt,8.0,Dylan Urquhart,Heung like Son,#cc66cc
+124,9.0,Danny Ings,9.0,Dylan Urquhart,Heung like Son,#cc66cc
+125,11.0,Raheem Sterling,10.0,Dylan Urquhart,Heung like Son,#cc66cc
+126,9.0,Andrew Robertson,11.0,Dylan Urquhart,Heung like Son,#cc66cc
+127,8.0,Heung-Min Son,12.0,Dylan Urquhart,Heung like Son,#cc66cc
+128,13.0,Heung-Min Son,13.0,Dylan Urquhart,Heung like Son,#cc66cc
+129,10.0,Heung-Min Son,14.0,Dylan Urquhart,Heung like Son,#cc66cc
+130,9.0,Danny Ings,15.0,Dylan Urquhart,Heung like Son,#cc66cc
+131,12.0,Heung-Min Son,16.0,Dylan Urquhart,Heung like Son,#cc66cc
+132,10.0,Raheem Sterling,17.0,Dylan Urquhart,Heung like Son,#cc66cc
+133,13.0,Danny Ings,18.0,Dylan Urquhart,Heung like Son,#cc66cc
+134,10.0,Raheem Sterling,19.0,Dylan Urquhart,Heung like Son,#cc66cc
+135,9.0,Danny Ings,20.0,Dylan Urquhart,Heung like Son,#cc66cc
+136,12.0,Andrew Robertson,21.0,Dylan Urquhart,Heung like Son,#cc66cc
+137,17.0,Riyad Mahrez,22.0,Dylan Urquhart,Heung like Son,#cc66cc
+138,9.0,Teemu Pukki,23.0,Dylan Urquhart,Heung like Son,#cc66cc
+139,10.0,Jorge Luiz Frello Filho,24.0,Dylan Urquhart,Heung like Son,#cc66cc
+140,8.0,Héctor Bellerín,25.0,Dylan Urquhart,Heung like Son,#cc66cc
+141,13.0,Heung-Min Son,26.0,Dylan Urquhart,Heung like Son,#cc66cc
+142,12.0,Kasper Schmeichel,27.0,Dylan Urquhart,Heung like Son,#cc66cc
+143,8.0,Patrick van Aanholt,28.0,Dylan Urquhart,Heung like Son,#cc66cc
+144,6.0,Patrick van Aanholt,29.0,Dylan Urquhart,Heung like Son,#cc66cc
+145,13.0,Marcus Rashford,1.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+146,11.0,Bernard Anício Caldeira Duarte,2.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+147,15.0,Mohamed Salah,3.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+148,6.0,Nicolás Otamendi,4.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+149,9.0,Mason Mount,5.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+150,15.0,Nicolás Otamendi,6.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+151,6.0,Kepa Arrizabalaga,7.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+152,10.0,Raúl Jiménez,8.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+153,14.0,Marcos Alonso,9.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+154,9.0,Neal Maupay,10.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+155,14.0,Kyle Walker,11.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+156,9.0,Raúl Jiménez,12.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+157,11.0,Marcus Rashford,13.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+158,5.0,Raúl Jiménez,14.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+159,13.0,Marcus Rashford,15.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+160,13.0,Mohamed Salah,16.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+161,16.0,Mohamed Salah,17.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+162,11.0,Marcos Alonso,18.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+163,11.0,Raúl Jiménez,19.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+164,9.0,Marcus Rashford,20.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+165,10.0,Mohamed Salah,21.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+166,12.0,Marcus Rashford,22.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+167,15.0,Virgil van Dijk,23.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+168,16.0,Mohamed Salah,24.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+169,16.0,Mohamed Salah,25.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+170,7.0,Kyle Walker,26.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+171,9.0,Neal Maupay,27.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+172,16.0,Marcos Alonso,28.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+173,10.0,Vicente Guaita,29.0,Matt Lowry,Ol' Cider's Lowry,#ffe6d2
+174,9.0,Willy Boly,1.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+175,13.0,Sadio Mané,2.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+176,8.0,Joelinton Cássio Apolinário de Lira,3.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+177,12.0,Youri Tielemans,4.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+178,15.0,Sadio Mané,5.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+179,12.0,John Lundstram,6.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+180,9.0,Vicente Guaita,7.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+181,12.0,Sadio Mané,8.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+182,9.0,Youri Tielemans,9.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+183,19.0,Benjamin Chilwell,10.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+184,21.0,John Lundstram,11.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+185,8.0,Christian Pulisic,12.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+186,9.0,Sadio Mané,13.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+187,3.0,Felipe Anderson Pereira Gomes,14.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+188,15.0,Sadio Mané,15.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+189,13.0,Diogo Jota,16.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+190,11.0,John Lundstram,17.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+191,6.0,Bernd Leno,18.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+192,6.0,Sadio Mané,19.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+193,11.0,Sadio Mané,20.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+194,11.0,César Azpilicueta,21.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+195,9.0,Alisson Ramses Becker,22.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+196,13.0,Alisson Ramses Becker,23.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+197,9.0,Alisson Ramses Becker,24.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+198,9.0,Youri Tielemans,25.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+199,7.0,John Lundstram,26.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+200,16.0,Diogo Jota,27.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+201,12.0,Diogo Jota,28.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+202,13.0,Willian Borges Da Silva,29.0,Tom Barratt,Ain't No Holebas Girl,#0ac832
+203,13.0,Harry Kane,1.0,Dominic Drewery,Chopporoos,#1e2832
+204,11.0,Daniel Ceballos Fernández,2.0,Dominic Drewery,Chopporoos,#1e2832
+205,10.0,David Silva,3.0,Dominic Drewery,Chopporoos,#1e2832
+206,16.0,Jamie Vardy,4.0,Dominic Drewery,Chopporoos,#1e2832
+207,9.0,David de Gea,5.0,Dominic Drewery,Chopporoos,#1e2832
+208,11.0,David Silva,6.0,Dominic Drewery,Chopporoos,#1e2832
+209,12.0,Jamie Vardy,7.0,Dominic Drewery,Chopporoos,#1e2832
+210,8.0,Willian Borges Da Silva,8.0,Dominic Drewery,Chopporoos,#1e2832
+211,11.0,David Silva,9.0,Dominic Drewery,Chopporoos,#1e2832
+212,20.0,Jamie Vardy,10.0,Dominic Drewery,Chopporoos,#1e2832
+213,11.0,Leandro Trossard,11.0,Dominic Drewery,Chopporoos,#1e2832
+214,12.0,Jamie Vardy,12.0,Dominic Drewery,Chopporoos,#1e2832
+215,12.0,Jamie Vardy,13.0,Dominic Drewery,Chopporoos,#1e2832
+216,6.0,Jamie Vardy,14.0,Dominic Drewery,Chopporoos,#1e2832
+217,9.0,David Silva,15.0,Dominic Drewery,Chopporoos,#1e2832
+218,16.0,Harry Kane,16.0,Dominic Drewery,Chopporoos,#1e2832
+219,8.0,Joseph Gomez,17.0,Dominic Drewery,Chopporoos,#1e2832
+220,16.0,Willian Borges Da Silva,18.0,Dominic Drewery,Chopporoos,#1e2832
+221,8.0,Harry Kane,19.0,Dominic Drewery,Chopporoos,#1e2832
+222,8.0,Joseph Gomez,20.0,Dominic Drewery,Chopporoos,#1e2832
+223,12.0,Gerard Deulofeu,21.0,Dominic Drewery,Chopporoos,#1e2832
+224,14.0,Abdoulaye Doucouré,22.0,Dominic Drewery,Chopporoos,#1e2832
+225,6.0,Joseph Gomez,23.0,Dominic Drewery,Chopporoos,#1e2832
+226,12.0,Alex Oxlade-Chamberlain,24.0,Dominic Drewery,Chopporoos,#1e2832
+227,16.0,Antonio Rüdiger,25.0,Dominic Drewery,Chopporoos,#1e2832
+228,15.0,Harry Maguire,26.0,Dominic Drewery,Chopporoos,#1e2832
+229,6.0,David de Gea,27.0,Dominic Drewery,Chopporoos,#1e2832
+230,11.0,Michail Antonio,28.0,Dominic Drewery,Chopporoos,#1e2832
+231,11.0,Jamie Vardy,29.0,Dominic Drewery,Chopporoos,#1e2832

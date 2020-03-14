@@ -61,15 +61,12 @@ def make_plot(df_plot):
 
     p = figure(y_range=Range1d(0, 30, bounds="auto"),
                x_range=Range1d(0, 39, bounds="auto"),
-               plot_width=1600, plot_height=1000,
+               aspect_ratio=1.5, sizing_mode="scale_both",
                x_axis_label = 'Game Week',
                y_axis_label = 'Points'
                )
-    p.add_layout(Title(text="Each owner's highest scoring player for each gameweek shown",
-                       text_font_style="italic"), 'above')
-    p.add_layout(Title(text="Current Highest Matchday Score is from Gameweek " + str(rnd) + ", when " + player + " Scored " + str(int(score)) + " Points for " + team + " (" + owner + ")",
-                       text_font_style="italic"), 'above')
-    p.add_layout(Title(text="Novelty 2 - Highest Player Score", text_font_size="16pt"), 'above')
+
+    nov_2_text = "Current highest matchday score is from gameweek " + str(rnd) + ", when " + player + " Scored " + str(int(score)) + " points for " + team + " (" + owner + ")"
 
     # gold line and circles
     p.line(range(1,39), current_highest_player_score, line_width=3, color='#e5c100')
@@ -92,7 +89,7 @@ def make_plot(df_plot):
 #                legend = owner, hover_alpha=0.5, hover_line_color='owner_color', line_width=2)
 
         p.circle('gw', 'score', source=src, alpha=1, size=13, color = 'owner_color', 
-                 legend = owner, muted_color='owner_color', muted_alpha=0.4, name=owner)
+                 legend_label = owner, muted_color='owner_color', muted_alpha=0.4, name=owner)
 
     src = ColumnDataSource(df_plot)
     hover = HoverTool(names=list(df_plot['owner'].unique()),
@@ -114,7 +111,7 @@ def make_plot(df_plot):
     # Styling
     p = style(p)
     
-    return p
+    return p, nov_2_text
 
 
 #p = make_plot()

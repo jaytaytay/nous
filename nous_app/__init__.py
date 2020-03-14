@@ -47,8 +47,7 @@ df_single_lines = pd.read_csv(config.path_results)
 
 
 df_novelty_2    = pd.read_csv(config.path_novelty_2) 
-df_novelty_5    = pd.read_csv(config.path_novelty_5, header=None)
-df_novelty_5.columns = ['gw','owner','gw_score']
+df_novelty_5    = pd.read_csv(config.path_novelty_5, header=0)
 
 dict_owners = config.dict_owners
 
@@ -60,71 +59,52 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-	name = request.args.get("name")
-	if name == None:
-		name = "Edward"
-	return render_template("index.html", name=name)
+	return render_template("index_2.html")
 
-    # -----------------------------------------
-    #       Performance
-    # -----------------------------------------
+@app.route("/home")
+def home():
+	return render_template("index_2.html")
 
-    # -----------------------------------------
-    #       Novelties
-    # -----------------------------------------
+@app.route("/soccer")
+def soccer():
+	return render_template("soccer.html")
 
-#    1. Highest Round Team Score (excluding double game-weeks).
-@app.route("/melmac/2019-20/novelty_1")
-def novelty_1():
-	plot = novelty1.make_plot(df_single_lines)
-	script, div = components(plot)
-	return render_template("/melmac/2019-20/novelty_1.html", the_div=div, the_script=script)
+@app.route("/soccer/fantasy")
+def soccer_fantasy():
+	return render_template("soccer/fantasy.html")
 
-#    2 Highest 1-Game Player Score (Can be 1 game from a double game-week).
-@app.route("/melmac/2019-20/novelty_2")
-def novelty_2():
-	plot = novelty2.make_plot(df_novelty_2)
-	script, div = components(plot)
-	return render_template("/melmac/2019-20/novelty_1.html", the_div=div, the_script=script)
+@app.route("/soccer/fantasy/novelties")
+def novelties():
+	nov_1_plot, nov_1_text = novelty1.make_plot(df_single_lines)
+	nov_1_script, nov_1_div = components(nov_1_plot)
 
-#    3 Highest Losing Score (excluding double game-weeks).
-@app.route("/melmac/2019-20/novelty_3")
-def novelty_3():
-	plot = novelty3.make_plot(df_single_lines)
-	script, div = components(plot)
-	return render_template("/melmac/2019-20/novelty_1.html", the_div=div, the_script=script)
+	nov_2_plot, nov_2_text = novelty2.make_plot(df_novelty_2)
+	nov_2_script, nov_2_div = components(nov_2_plot)
 
-#    4 Lowest Winning Score. 
-@app.route("/melmac/2019-20/novelty_4")
-def novelty_4():
-	plot = novelty4.make_plot(df_single_lines)
-	script, div = components(plot)
-	return render_template("/melmac/2019-20/novelty_1.html", the_div=div, the_script=script)
+	nov_3_plot, nov_3_text = novelty3.make_plot(df_single_lines)
+	nov_3_script, nov_3_div = components(nov_3_plot)
 
-#    5 Highest Bench Score in a game-week. Bench players  who are auto-subbed on will not count (Players dropped to the bench to "rig" this will be excluded if the league agree).
-@app.route("/melmac/2019-20/novelty_5")
-def novelty_5():
-	plot = novelty5.make_plot(df_novelty_5, dict_owners)
-	script, div = components(plot)
-	return render_template("/melmac/2019-20/novelty_1.html", the_div=div, the_script=script)
+	nov_4_plot, nov_4_text = novelty4.make_plot(df_single_lines)
+	nov_4_script, nov_4_div = components(nov_4_plot)
 
-#    6 Most wins against the eventual champion.
-@app.route("/melmac/2019-20/novelty_6")
-def novelty_6():
-	plot = novelty6.novelty6(df_single_lines)
-	script, div = components(plot)
-	return render_template("/melmac/2019-20/novelty_1.html", the_div=div, the_script=script)
+	nov_5_plot, nov_5_text = novelty5.make_plot(df_novelty_5, dict_owners)
+	nov_5_script, nov_5_div = components(nov_5_plot)
 
-#    7 Worst First Round Pick (Player score for the season).
-@app.route("/melmac/2019-20/novelty_7")
-def novelty_7():
-	plot = novelty7.novelty7(df_pl_past, df_team_info, df_pl_players, dict_owners)
-	script, div = components(plot)
-	return render_template("/melmac/2019-20/novelty_1.html", the_div=div, the_script=script)
-	
-#    8 Most player points from a waiver request/free agent pick-up the week after (Can count 1 game scores from double game-weeks).    
-#tab8 = novelty7.novelty7(df_pl_past, df_team_info, df_pl_players, dict_owners)
+	nov_6_table, nov_6_text = novelty6.novelty6(df_single_lines)
 
+	nov_7_plot, nov_7_table, nov_7_text = novelty7.novelty7(df_pl_past, df_team_info, df_pl_players, dict_owners)
+	nov_7_plot_script, nov_7_plot_div = components(nov_7_plot)
+	nov_7_table_script, nov_7_table_div = components(nov_7_table)
+
+	return render_template("/soccer/fantasy/novelties_1920.html", \
+		nov_1_div=nov_1_div, nov_1_script=nov_1_script, nov_1_text=nov_1_text, \
+		nov_2_div=nov_2_div, nov_2_script=nov_2_script, nov_2_text=nov_2_text, \
+		nov_3_div=nov_3_div, nov_3_script=nov_3_script, nov_3_text=nov_3_text, \
+		nov_4_div=nov_4_div, nov_4_script=nov_4_script, nov_4_text=nov_4_text, \
+		nov_5_div=nov_5_div, nov_5_script=nov_5_script, nov_5_text=nov_5_text, \
+		nov_6_table=[nov_6_table.to_html(classes='nov_6', header="true")], nov_6_text=nov_6_text, \
+		nov_7_plot_div=nov_7_plot_div, nov_7_plot_script=nov_7_plot_script, \
+		nov_7_table_div=nov_7_table_div, nov_7_table_script=nov_7_table_script, nov_7_text=nov_7_text)
 
 if __name__ == "__main__":
 	app.run(host='0.0.0.0')

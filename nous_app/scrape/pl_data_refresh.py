@@ -34,19 +34,16 @@ import config
 base_url        = "https://fantasy.premierleague.com/api/"
 url_bs_static   = "bootstrap-static/"
 
-
-
 # Download all player data: https://fantasy.premierleague.com/drf/bootstrap-static/
 def get_players_info():
     r = requests.get(base_url + url_bs_static)
     jsonResponse = r.json()
-    with open(path_player_info, 'w') as outfile:
+    with open(config.path_player_info_json, 'w') as outfile:
         json.dump(jsonResponse, outfile)
-
 
 # read player info from the json file that we downlaoded
 def get_all_players_detailed_json():
-    with open(path_player_info) as json_data:
+    with open(config.path_player_info_json) as json_data:
         d = json.load(json_data)
         return d
     
@@ -54,12 +51,14 @@ def get_all_players_detailed_json():
 # Import fresh player data - full season data
 # -----------------------------------------
     get_players_info()
-    player_data = []
+
     all_data = get_all_players_detailed_json()
-#    for element in all_data["elements"]:
-#        player_data.append(json_normalize(element))
-#    df_player_data = pd.concat(player_data, sort=False).reset_index(drop=True)
-#    
+    
+    player_data = []
+    for element in all_data["elements"]:
+        player_data.append(json_normalize(element))
+    df_player_data = pd.concat(player_data, sort=False).reset_index(drop=True)
+    
 # -----------------------------------------
 # Import fresh team data - full season data
 # -----------------------------------------

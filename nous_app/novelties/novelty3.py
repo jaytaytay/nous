@@ -43,46 +43,44 @@ def style(p):
 # Function to make the plot
 def make_plot(df_single_lines):
     
-    df = df_single_lines[df_single_lines['Result'] == 'L']
+    df = df_single_lines[df_single_lines['result'] == 'L']
     current_highest_losing_score = []
     for i in range(1,39):
-        current_highest_losing_score.append(df[df['Gameweek'] == i]['Score'].max())
+        current_highest_losing_score.append(df[df['gw'] == i]['score'].max())
     current_highest_losing_score = pd.Series(current_highest_losing_score).cummax().fillna(method='ffill')
     score = current_highest_losing_score.max()
     rnd = np.searchsorted(current_highest_losing_score, pd.Series(current_highest_losing_score).max()).item() + 1
-    team = df[df['Score']==score]['Team'].iloc[0]
-    owner = df[df['Score']==score]['Owner'].iloc[0]
+    team = df[df['score']==score]['team'].iloc[0]
+    owner = df[df['score']==score]['owner'].iloc[0]
 
     p = figure(y_range=Range1d(0, 100, bounds="auto"),
                x_range=Range1d(0, 39, bounds="auto"),
-               plot_width=1600, plot_height=1000,
+               aspect_ratio=1.5, sizing_mode="scale_both",
                x_axis_label = 'Game Week',
                y_axis_label = 'Points'
                )
-    p.add_layout(Title(text="All losing scores shown",
-                       text_font_style="italic"), 'above')
-    p.add_layout(Title(text="Current Highest Losing Score is from Gameweek " + str(rnd) + ", when " + team + " (" + owner + ") Scored " + str(int(score)) + " Points",
-                       text_font_style="italic"), 'above')
-    p.add_layout(Title(text='Novelty 3 - Highest Losing Score', text_font_size="16pt"), 'above')
+
+    nov_3_text = "Current Highest Losing score is from gameweek " + str(rnd) + ", when " + team + " (" + owner + ") scored " + str(int(score)) + " points"
+
 
     p.line(range(1,39),current_highest_losing_score, line_width=3, color='#e5c100')
-    top_score_highlight_ys = [-1]*(rnd-1)
+    top_score_highlight_ys = [-10]*(rnd-1)
     top_score_highlight_ys.append(score)
-    top_score_highlight_ys = top_score_highlight_ys + [-1]*(38-rnd)
+    top_score_highlight_ys = top_score_highlight_ys + [-10]*(38-rnd)
     p.circle(range(1,39), top_score_highlight_ys, alpha=1, size=18, color = '#e5c100')
 
-    for owner in set(df['Owner']):
-        src = ColumnDataSource(df[df.Owner == owner])
-        p.circle('Gameweek', 'Score', source=src, alpha='fill_alpha', size=13, color = 'owner_color', legend = owner, 
+    for owner in set(df['owner']):
+        src = ColumnDataSource(df[df.owner == owner])
+        p.circle('gw', 'score', source=src, alpha='fill_alpha', size=13, color = 'owner_color', legend_label = owner, 
                  muted_color='owner_color', muted_alpha=0.4, name=owner)
 
         
     src = ColumnDataSource(df)
-    hover = HoverTool(names=list(df['Owner'].unique()),
-                      tooltips=[('Week', '@Gameweek'),
-                                ('Owner', '@Owner, @Team (@Result)'),
-                                ('Opposition', '@Opp_Owner, @Opp_Team'),
-                                ('Score', '@Score - @Opp_Score'),
+    hover = HoverTool(names=list(df['owner'].unique()),
+                      tooltips=[('Week', '@gw'),
+                                ('owner', '@owner, @team (@result)'),
+                                ('opposition', '@opp_owner, @opp_team'),
+                                ('score', '@score - @opp_score'),
                                 ])
     p.add_tools(hover)
     
@@ -97,7 +95,7 @@ def make_plot(df_single_lines):
     # Styling
     p = style(p)
     
-    return p
+    return p, nov_3_text
 
 
 # -----------------------------------------

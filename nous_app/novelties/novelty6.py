@@ -57,47 +57,50 @@ def make_plot(df_table):
     
     list_cols = [TableColumn(field = "index", title = "", width=300)]
     for owner in df_table.columns[1:]:
-        list_cols.append(TableColumn(field = owner, title = owner, width=300))
+        list_cols.append(TableColumn(field = owner, title = owner))
 
     data_table = DataTable(source = cds_table, columns=list_cols, editable = False, fit_columns=True, index_position=None)
     
-#    data_table.add_layout(Title(text="All owners' bench scores shown",
-#                       text_font_style="italic"), 'above')
-#    data_table.add_layout(Title(text="Current Highest Bench Score is from Gameweek " + str(rnd) + ", when " + team + " (" + owner + ") Scored " + str(int(score)) + " Points",
-#                       text_font_style="italic"), 'above')
-    #Can't add layouts to data table. forum posts suggest adding div above data table in a column.
-    # data_table.add_layout(Title(text="Novelty 6 - Most WWins Against Eventual Champion", text_font_size="16pt"), 'above')
+    nov_6_text = "Current league-leader is " # + str(ladder_leader_team) + " (" + str(ladder_leader_owner) + "). " \
+                 # + team + " (" + owner + ") has beaten them " + str(int(score)) + " times"
 
-    
-    return data_table
+    return data_table, nov_6_text
 
 def make_table(df):
     
-    df_grouped = df.groupby(by=['Owner','Opp_Owner','Result']).count()
+    df_grouped = df.groupby(by=['owner','opp_owner','result']).count().astype(int)
     df_table = pd.DataFrame()
-    for owner in set(df.Owner):
-        for opp in set(df.Owner):
+    for owner in set(df.owner):
+        for opp in set(df.owner):
             try:
-                df_table.loc[owner,opp] = df_grouped.loc[owner,opp,'W'].max()
+                df_table.loc[owner,opp] = int(df_grouped.loc[owner,opp,'W'].max())
             except:
-                df_table.loc[owner,opp] = 0
+                df_table.loc[owner,opp] = int(0)
+        
+    df_table['Total Wins'] = df_table.sum(axis=1).astype(int).astype(str)
 
-#    for owner in set(df.Owner):
-#        most_wins = df_table[owner].max()
-#        df_table.loc['leader', owner] = list(df_table[df_table[owner]==most_wins].index)
+    nov_6_text = "Current league-leader is " # + str(ladder_leader_team) + " (" + str(ladder_leader_owner) + "). " \
+                 # + team + " (" + owner + ") has beaten them " + str(int(score)) + " times"
 
-    return df_table
+    # for owner in set(df.owner):
+    #     most_wins = df_table[owner].max()
+    #     df_table.loc['Novelty winner(s) would be:', owner] = ', '.join(list(df_table[df_table[owner]==most_wins].index))
+
+    for owner in set(df.owner):    
+        df_table[owner] = df_table[owner].astype(int).astype(str)
+
+    return df_table, nov_6_text
 # -----------------------------------------
 #       Main Script
 # -----------------------------------------
 
 def novelty6(df_single_lines):
 
-    df_table = make_table(df_single_lines)
+    df_table, nov_6_text = make_table(df_single_lines)
     
-    table = make_plot(df_table)
+    # table, nov_6_text = make_plot(df_table)
     
     # Make a tab with the layout 
 #    tab = Panel(child=table, title = 'Novelty 6')
-    return table
+    return df_table.astype(str), nov_6_text
 

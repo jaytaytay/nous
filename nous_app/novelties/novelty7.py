@@ -39,7 +39,7 @@ def make_dataset(df_pl_past, df_team_info, df_pl_players, dict_owners):
     dict_picks = df_owners['first_round_pick'].to_dict()
     dict_picks = {v: k for k, v in dict_picks.items()}
     
-    dict_team_names = df_owners['Team'].to_dict()
+    dict_team_names = df_owners['team'].to_dict()
 #    dict_team_names = {v: k for k, v in dict_team_names.items()}
     
     for player in list(dict_picks.keys()):
@@ -51,7 +51,7 @@ def make_dataset(df_pl_past, df_team_info, df_pl_players, dict_owners):
         round_opponent.append(df['opposition_name'])
         label_list.append(df['friendly_name'].iloc[0])
         owner = df_owners[df_owners['first_round_pick']==player].reset_index(drop=False)['index'].item()
-        colour1_list.append(df_owners.loc[owner, 'Colour'])
+        colour1_list.append(df_owners.loc[owner, 'colour'])
         x_list_rounds.append(list(range(0,39)))
         y_range_max = max(y_range_max, df['total_points'].cumsum().max())
     
@@ -118,13 +118,11 @@ def make_plot(dict_source, y_range_max, df, df_labels):
     owner   = series['owner']
     score   = series['total_points']
     
-    p = figure(plot_width=1400, plot_height=600,
+    p = figure(aspect_ratio=1.5, sizing_mode="scale_both",
               x_axis_label = 'Rounds', x_range =(0,38),
               y_axis_label = 'Total Points', y_range=(0, y_range_max + 10))
     
-    p.add_layout(Title(text="Current Lowest Scoring First Round Draft Pick is " + str(player) + ", drafted by " + team + " (" + owner + ") with " + str(int(score)) + " Points", 
-                       text_font_style="italic"), 'above')
-    p.add_layout(Title(text="Novelty 7 - Worst First Round Draft Pick", text_font_size="16pt"), 'above')
+    nov_7_text = "Current Lowest Scoring First Round Draft Pick is " + str(player) + ", drafted by " + team + " (" + owner + ") with " + str(int(score)) + " Points"
     
     src = ColumnDataSource(dict_source)    
     p.multi_line(xs='xs', ys='cums',
@@ -135,7 +133,7 @@ def make_plot(dict_source, y_range_max, df, df_labels):
     p.add_tools(HoverTool(show_arrow=False, 
                           line_policy='next', 
                           tooltips=[
-                                    ('Player','@labels')
+                                    ('player','@labels')
                                     ]
                           )
                 )
@@ -145,7 +143,8 @@ def make_plot(dict_source, y_range_max, df, df_labels):
     for i in range(0,8):
         src = ColumnDataSource(dict(
                                     xs=df_source.loc[i,'xs'],
-                                    cums=df_source.loc[i,'cums'] +(39-len(df_source.loc[i,'cums']))* [-1]
+                                    cums=df_source.loc[i,'cums'] +(39-len(df_source.loc[i,'cums']))* [-1],
+                                    labels=[df_source.loc[i,'labels']]*len(df_source.loc[i,'xs'])
                                     )
                                 )
         p.circle('xs', 'cums', source=src, alpha=1, size=4, color = df_source.loc[i,'colour1'])
@@ -162,14 +161,11 @@ def make_plot(dict_source, y_range_max, df, df_labels):
                     text_font_size='10pt')
 
     p.add_layout(labels)
-
-
     
     # Styling
     p = style(p)
     
-    return p
-
+    return p, nov_7_text
 
 def make_table(df_table):
     
@@ -192,12 +188,12 @@ def make_table(df_table):
 def novelty7(df_pl_past, df_team_info, df_pl_players, dict_owners):
     
     dict_source, y_range_max, df_table, df_labels = make_dataset(df_pl_past, df_team_info, df_pl_players, dict_owners)
-    p = make_plot(dict_source, y_range_max, df_table, df_labels)
+    p, nov_7_text= make_plot(dict_source, y_range_max, df_table, df_labels)
     table = make_table(df_table)
     
     # Create a row layout
-    layout = column(p, table)
+   # layout = column(p, table)
     
     # Make a tab with the layout 
     #tab = Panel(child=layout, title = 'Novelty 7')
-    return layout
+    return p, table, nov_7_text
