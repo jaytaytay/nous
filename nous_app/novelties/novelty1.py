@@ -7,8 +7,8 @@ Created on Thu Jan  3 12:14:42 2019
 
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #         Bokeh visualisation MM Fantasy
-# Novelty 1: Highest Round Team Score (excluding double game-weeks).
-# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# Novelty 1: Highest Round team score (excluding double game-weeks).
+# +++++++++++++++++++++++++++++++++++++++++++++o+++++++++++++++++++++++++++++++++
 
 # ==============================================================================
 # Chapter 1: Import modules
@@ -47,45 +47,43 @@ def make_plot(df_single_lines):
     
     current_highest_team_score = []
     for i in range(1,39):
-        current_highest_team_score.append(df_single_lines[df_single_lines['Gameweek'] == i]['Score'].max())
+        current_highest_team_score.append(df_single_lines[df_single_lines['gw'] == i]['score'].max())
     current_highest_team_score = pd.Series(current_highest_team_score).fillna(0).cummax()
     
     score = max(current_highest_team_score)
     rnd = np.searchsorted(current_highest_team_score, pd.Series(current_highest_team_score).max()).item() + 1
-    team = df_single_lines[df_single_lines['Score']==score]['Team'].iloc[0]
-    owner = df_single_lines[df_single_lines['Score']==score]['Owner'].iloc[0]
+    team = df_single_lines[df_single_lines['score']==score]['team'].iloc[0]
+    owner = df_single_lines[df_single_lines['score']==score]['owner'].iloc[0]
     
     current_highest_team_score = list(current_highest_team_score) + (38-len(current_highest_team_score)) * [score]
 
     p = figure(y_range=Range1d(0, 100, bounds="auto"),
                x_range=Range1d(0, 39, bounds="auto"),
-               plot_width=1800, plot_height=1200,
+               #plot_width=1800, plot_height=1200,
+               aspect_ratio=1.5, sizing_mode="scale_both",
                x_axis_label = 'Game Week',
                y_axis_label = 'Points'
                )
-    p.add_layout(Title(text="\nAll individual gameweek scores shown",
-                       text_font_style="italic"), 'above')
-    p.add_layout(Title(text="Current Highest Gameweek Score is from Gameweek " + str(rnd) + ", when " + team + " (" + owner + ") Scored " + str(int(score)) + " Points",
-                       text_font_style="italic"), 'above')    
-    p.add_layout(Title(text="Novelty 1 - Highest Gameweek Score", text_font_size="16pt"), 'above')
+    
+    nov_1_text="Current highest gameweek score is from gameweek " + str(rnd) + ", when " + team + " (" + owner + ") scored " + str(int(score)) + " points"
     
     p.line(range(1,39), current_highest_team_score, line_width=3, color='#e5c100')
-    top_score_highlight_ys = [-1]*(rnd-1)
+    top_score_highlight_ys = [-10]*(rnd-1)
     top_score_highlight_ys.append(score)
-    top_score_highlight_ys = top_score_highlight_ys + [-1]*(38-rnd)
+    top_score_highlight_ys = top_score_highlight_ys + [-10]*(38-rnd)
     p.circle(range(1,39), top_score_highlight_ys, alpha=1, size=18, color = '#e5c100')
 
-    for owner in set(df_single_lines['Owner']):
-        src = ColumnDataSource(df_single_lines[df_single_lines['Owner'] == owner])
-        p.circle('Gameweek', 'Score', source=src, alpha='fill_alpha', size='size', color = 'owner_color', 
+    for owner in set(df_single_lines['owner']):
+        src = ColumnDataSource(df_single_lines[df_single_lines['owner'] == owner])
+        p.circle('gw', 'score', source=src, alpha='fill_alpha', size='size', color = 'owner_color', 
                  legend_label = owner, muted_color='owner_color', muted_alpha=0.4, name=owner)
 
     src = ColumnDataSource(df_single_lines)
-    hover = HoverTool(names=list(df_single_lines['Owner'].unique()),
-                      tooltips=[('Week', '@Gameweek'),
-                                ('Owner', '@Owner, @Team (@Result)'),
-                                ('Opposition', '@Opp_Owner, @Opp_Team'),
-                                ('Score', '@Score - @Opp_Score'),
+    hover = HoverTool(names=list(df_single_lines['owner'].unique()),
+                      tooltips=[('Week', '@gw'),
+                                ('owner', '@owner, @team (@result)'),
+                                ('opposition', '@opp_owner, @opp_team'),
+                                ('score', '@score - @opp_score'),
                                 ])
     p.add_tools(hover)
     
@@ -100,7 +98,7 @@ def make_plot(df_single_lines):
     # Styling
     p = style(p)
     
-    return p
+    return p, nov_1_text
 
 
 # -----------------------------------------

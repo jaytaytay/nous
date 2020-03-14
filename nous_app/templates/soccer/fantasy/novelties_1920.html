@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>19/20 Novelties</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+
+.nov_6 tr:hover {background-color: ##d9f6ff}
+
+.nov_6 {
+      border-collapse: collapse;
+      width: 100%;
+      table-layout: auto
+        }
+            
+.nov_6 td, .nov_6 th {
+  padding: 3px;
+  text-align: center;
+  width: auto
+}
+
+.nov_6 tr:nth-child(even){background-color: #bdf0ff;}
+.nov_6 td:nth-child(0) {min-width: 400px}
+
+
+
+</style>
+
+<head>
+    <title>Mel McLachlan Fantasy Premier League - Season 2019/20 - Novelty 1</title>
+
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-1.4.0.min.js"></script>
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-1.4.0.min.js"></script>
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-1.4.0.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/home" class="w3-bar-item w3-button w3-padding-large">  
+
+      <div >
+        <img src="../../static/logo/nous_white_blacklines_on_alpha.png" alt="NOUS" style="height:30px">
+      </div>
+    </a>
+    <div class="w3-dropdown-hover w3-hide-small">
+
+      <button class="w3-padding-large w3-button" title="soccer">⚽️ <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="/soccer" class="w3-bar-item w3-button">Soccer Home</a>
+        <a href="/soccer/reality" class="w3-bar-item w3-button">Reality</a>
+        <a href="/soccer/fantasy" class="w3-bar-item w3-button">Fantasy</a>
+      </div>
+    </div>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="football">🏉 <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="/football/reality" class="w3-bar-item w3-button">Reality</a>
+        <a href="/football/fantasy" class="w3-bar-item w3-button">Fantasy</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="/soccer" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">⚽️</a>
+  <a href="/football" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">🏉</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px;width:70%">
+
+    <div align="center" style="background-color:#ffffff;width:100%;color:#000000">
+        <h1 style="padding-top:5px">
+        <b>Mel McLaughlin Fantasy Premier League</b>
+        <h1>
+        <h2>
+            Season 2019/20
+            <br />Novelty Bets
+        </h2>
+    </div>
+
+    <div align="center" style="background-color:#000000;width:100%;padding:1px;color:#ffffff">
+      <h2>
+        Novelty 1 - Highest Gameweek Score
+      </h2>
+    </div>
+    <div style="overflow-wrap: break-word">
+    {{ nov_1_text|safe }}
+    <br /><i>All individual gameweek scores shown</i>
+    </div>
+    
+    <div style="padding-top:20px">
+    {{ nov_1_script|safe }}
+    {{ nov_1_div|safe }}
+     </div>
+    
+     <div align="center" style="background-color:#000000;width:100%;padding:1px;color:#ffffff">
+      <h2>
+        Novelty 2 - Highest Player Score
+      </h2>
+    </div>
+    <div style="overflow-wrap: break-word">
+    {{ nov_2_text|safe }}
+    <br /><i>Each owner's highest scoring player for each gameweek shown</i>
+    </div>
+    
+    <div style="padding-top:20px">
+    {{ nov_2_script|safe }}
+    {{ nov_2_div|safe }}
+     </div>
+    
+    <div align="center" style="background-color:#000000;width:100%;padding:1px;color:#ffffff">
+      <h2>
+        Novelty 3 - Highest Losing Score
+      </h2>
+    </div>
+    <div style="overflow-wrap: break-word">
+    {{ nov_3_text|safe }}
+    <br /><i>All losing scores shown</i>
+    </div>
+    
+    <div style="padding-top:20px">
+    {{ nov_3_script|safe }}
+    {{ nov_3_div|safe }}
+    </div>
+    
+    <div align="center" style="background-color:#000000;width:100%;padding:1px;color:#ffffff">
+      <h2>
+        Novelty 4 - Lowest Winning Score
+      </h2>
+    </div>
+    <div style="overflow-wrap: break-word">
+    {{ nov_4_text|safe }}
+    <br /><i>All winning scores shown. Ties awarded to earliest score.</i>
+    </div>
+    
+    <div style="padding-top:20px">
+    {{ nov_4_script|safe }}
+    {{ nov_4_div|safe }}
+    </div>
+    
+    <div align="center" style="background-color:#000000;width:100%;padding:1px;color:#ffffff">
+      <h2>
+        Novelty 5 - Highest Bench Score
+      </h2>
+    </div>
+    <div style="overflow-wrap: break-word">
+    {{ nov_5_text|safe }}
+    <br /><i>All owners' bench scores shown.</i>
+    </div>
+    
+    <div style="padding-top:20px">
+    {{ nov_5_script|safe }}
+    {{ nov_5_div|safe }}
+    </div>
+    
+    <div align="center" style="background-color:#000000;width:100%;padding:1px;color:#ffffff">
+      <h2>
+        Novelty 6 - Most Wins Against Eventual Champion
+      </h2>
+    </div>
+    <div style="overflow-wrap: break-word" >
+    {{ nov_6_text|safe }}
+    <br /><i>All owners' bench scores shown.</i>
+    <br /><i>Each row shows how many wins that player has against the column player.</i>
+    </div>
+    
+    <div style="padding-top:20px;padding-bottom:20px">
+    {% for table in nov_6_table %}
+            {{ table|safe }}
+    {% endfor %}
+    </div>
+    
+    <div align="center" style="background-color:#000000;width:100%;padding:1px;color:#ffffff">
+      <h2>
+       Novelty 7 - Worst First Round Draft Pick
+      </h2>
+    </div>
+    <div style="overflow-wrap: break-word">
+    {{ nov_7_text|safe }}
+    </div>
+    
+    <div style="padding-top:20px">
+    {{ nov_7_plot_script|safe }}
+    {{ nov_7_plot_div|safe }}
+    </div>
+
+    <div style="padding-top:20px">
+    {{ nov_7_table_script|safe }}
+    {{ nov_7_table_div|safe }}
+    </div>
+<!-- End Page Content -->
+</div>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

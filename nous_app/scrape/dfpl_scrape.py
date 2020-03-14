@@ -21,6 +21,7 @@ from io import StringIO
 #import sys
 
 import config
+import config2
 
 path = os.getcwd()
 
@@ -33,35 +34,44 @@ def scrape_fixtures():
     ## look to extend this to collect lineups (and store these in the liast_seasons[round] dataframes?)
     ## could investigate scheduling this to only scrape this round? or not to scrape old rounds? or rounds to far in future?
     
-    driver = webdriver.Chrome('/usr/local/bin/chromedriver')
-    list_season = []
+    driver = webdriver.Chrome(confgi.chrome_driver)
+    df_results = pd.DataFrame(columns=['home_team','home_owner','away_team','away_owner','score','href'])
     function_start = timer()
-    for i in range(1, 5):
+    for i in range(1, 30):
         urlpage = 'https://draftfantasyfootball.co.uk/league/started/HmeqQ3SqxHMSBnA5y/team/J996wRPcDekXEbooB/gameweek/' + str(i)
         driver.get(urlpage)
 #        time.sleep(10) # Let the user actually see something!
         locator = '//*[@id="wrapper"]/div[2]/div/div[1]/div/div[4]/table'
-        
+
         start = timer()
         end = timer()
         duration = end - start  # time in seconds
         
+        list_home_teams= []
+        list_home_owners= []
+        list_away_teams= []
+        list_away_owners= []
+        list_scores = []
+        list_hrefs = []
+        df = pd.DataFrame()
+        
         while duration < 30:
             try:
-                fixture_table = driver.find_element_by_xpath(locator).get_attribute('outerHTML')
-                list_season += pd.read_html(fixture_table)  # appends a df to list_season with the round's fixtures/results
+                for row in range(0,8):
+                    if row%2 == 0:
+                        list_home_teams.append(driver.find_element_by_xpath(locator).find_elements_by_tag_name('div')[row].get_attribute('innerHTML'))
+                        list_hrefs.append(driver.find_element_by_xpath(locator).find_elements_by_tag_name('a')[int(row/2)].get_attribute('href'))
+                        list_home_owners.append(driver.find_element_by_xpath(locator).find_elements_by_tag_name('strong')[row].get_attribute('innerHTML'))    
+                        list_scores.append(driver.find_element_by_xpath(locator).find_elements_by_class_name('text-center')[int(row)].get_attribute('innerHTML'))
+                    else:
+                        list_away_teams.append(driver.find_element_by_xpath(locator).find_elements_by_tag_name('div')[row].get_attribute('innerHTML'))
+                        list_away_owners.append(driver.find_element_by_xpath(locator).find_elements_by_tag_name('strong')[row].get_attribute('innerHTML'))    
                 
-                # now for hrefs
-                for row in range(1,5):
-                    #innerhtml
-                    locator = '//*[@id="wrapper"]/div[2]/div/div[1]/div/div[4]/table/tbody/tr[' + str(row) + ']/td[4]/a'
-                    href_elements = driver.find_elements_by_xpath(locator)
-                    j = 0
-                    for elem in href_elements:
-#                        print(elem.get_attribute('href'))
-                        list_season[i-1].loc[row-1, 3] = elem.get_attribute('href')  # writes the href to the df in list_season
-                        j += 1
-                    list_season[i-1]['gw'] = i
+                df = pd.DataFrame(list(zip(list_home_teams, list_home_owners, list_away_teams, list_away_owners, list_scores, list_hrefs)), \
+                                  columns=['home_team','home_owner','away_team','away_owner','score','href'])
+                df['gw'] = i
+                    
+                df_results = pd.concat([df_results, df])
                     
                 end = timer()
                 duration = end - start  # time in seconds
@@ -72,27 +82,18 @@ def scrape_fixtures():
             end = timer()
             duration = end - start
             
-        if fixture_table == None:
+        if len(df) < 1:
             print("Fixture scrape failed on round " + str(i))
             driver.quit()
             exit()
-         
-#        list_season.append(list_round)
-#        list_links.append(text.get_attribute('href')
-        fixture_table = None  # reset text for next loop test
         
     end = timer()
     duration = end - function_start  # time in seconds
     print('All fixtures successfully scraped in ' + str(round(duration, 2)) + ' seconds')
 
-
     driver.quit()    
     
-    df_results = pd.concat(list_season).reset_index(drop=False).rename(columns={'index':'gw_match_id',
-                                                                                0:'home',
-                                                                                1:'score',
-                                                                                2:'away',
-                                                                                3:'url'})
+    df_results.reset_index(inplace=True,drop=True)
     
     # Reformat
         # Split owners and teams
@@ -104,76 +105,70 @@ def scrape_fixtures():
     
     def split_score(old_score):
         dash   = old_score.rfind("-")
-        home    = old_score[:dash-1]
+        home   = old_score[:dash-1]
         away   = old_score[dash+1:]
         return home, away
     
     for row in range(0,len(df_results)):
-        df_results.loc[row,'home_team'], df_results.loc[row,'home_owner'] = string_split(df_results.loc[row,'home'])
-        df_results.loc[row,'away_team'], df_results.loc[row,'away_owner'] = string_split(df_results.loc[row,'away'])
-        df_results.loc[row,'home_score'], df_results.loc[row,'away_score'] = split_score(df_results.loc[row,'score'])
-    
+        df_results.loc[row,'home_score'], df_results.loc[row,'away_score'] = split_score(df_results.loc[row,'score'])    
     
     dict_owners = {
-                'Matt Lowry':       {'Team': "Ol' Cider's Lowry",             'first_round_pick': 253,    'Colour':'#ffe6d2'},
-                'Dylan Urquhart':   {'Team': 'Heung like Son',                'first_round_pick': 270,    'Colour':'#cc66cc'},
-                'james west':       {'Team': 'best in the west',              'first_round_pick': 273,    'Colour':'#ffb400'},
-                'Peter Allan':      {'Team': 'Wizards of Ozil',               'first_round_pick': 23,     'Colour':'#c73b32'},
-                'Liam Fariss':      {'Team': 'Corner taken quickly, ORIGIII!','first_round_pick': 22,     'Colour':'#32b4ff'},
-                'Liam Hussey':      {'Team': 'The Feminist Agenda',           'first_round_pick': 280,    'Colour':'#995f3d'},
-                'Tom Barratt':      {'Team': "Ain't No Holebas Girl",         'first_round_pick': 251,    'Colour':'#0ac832'},
-                'Dominic Drewery':  {'Team': 'Chopporoos',                    'first_round_pick': 372,    'Colour':'#1e2832'}
+                'Matt Lowry':       {'team': "Ol' Cider's Lowry",             'first_round_pick': 253,    'Colour':'#ffe6d2'},
+                'Dylan Urquhart':   {'team': 'Heung like Son',                'first_round_pick': 270,    'Colour':'#cc66cc'},
+                'james west':       {'team': 'best in the west',              'first_round_pick': 273,    'Colour':'#ffb400'},
+                'Peter Allan':      {'team': 'Wizards of Ozil',               'first_round_pick': 23,     'Colour':'#c73b32'},
+                'Liam Fariss':      {'team': 'Corner taken quickly, ORIGIII!','first_round_pick': 22,     'Colour':'#32b4ff'},
+                'Liam Hussey':      {'team': 'The Feminist Agenda',           'first_round_pick': 280,    'Colour':'#995f3d'},
+                'Tom Barratt':      {'team': "Ain't No Holebas Girl",         'first_round_pick': 251,    'Colour':'#0ac832'},
+                'Dominic Drewery':  {'team': 'Chopporoos',                    'first_round_pick': 372,    'Colour':'#1e2832'}
                 }
     
-    # make single lines
- 
-    df_single_lines = pd.DataFrame(columns=['Team', 'Opp_Team', 'Owner', 'Opp_Owner', 'Score', 'Opp_Score', 'Gameweek', 'Result', 'url', 'home'])
+    df_single_lines = pd.DataFrame(columns=['team', 'opp_team', 'owner', 'opp_owner', 'score', 'opp_score', 'gw', 'result', 'url', 'home'])
     
     j=0
     for i in range(0, len(df_results)):
         df_single_lines.loc[j] = [np.nan for n in range(df_single_lines.shape[1])]
-        df_single_lines.loc[j, 'Team']      = df_results.loc[i, 'home_team'].strip()
-        df_single_lines.loc[j, 'Opp_Team']  = df_results.loc[i, 'away_team'].strip()
-        df_single_lines.loc[j, 'Owner']     = df_results.loc[i, 'home_owner'].strip()
-        df_single_lines.loc[j, 'Opp_Owner'] = df_results.loc[i, 'away_owner'].strip()
-        df_single_lines.loc[j, 'Score']     = df_results.loc[i, 'home_score'].strip()
-        df_single_lines.loc[j, 'Opp_Score'] = df_results.loc[i, 'away_score'].strip()
-        df_single_lines.loc[j, 'Gameweek']  = df_results.loc[i, 'gw']
-        df_single_lines.loc[j, 'url']       = df_results.loc[i, 'url']
+        df_single_lines.loc[j, 'team']      = df_results.loc[i, 'home_team'].strip()
+        df_single_lines.loc[j, 'opp_team']  = df_results.loc[i, 'away_team'].strip()
+        df_single_lines.loc[j, 'owner']     = df_results.loc[i, 'home_owner'].strip()
+        df_single_lines.loc[j, 'opp_owner'] = df_results.loc[i, 'away_owner'].strip()
+        df_single_lines.loc[j, 'score']     = df_results.loc[i, 'home_score'].strip()
+        df_single_lines.loc[j, 'opp_score'] = df_results.loc[i, 'away_score'].strip()
+        df_single_lines.loc[j, 'gw']  = df_results.loc[i, 'gw']
+        df_single_lines.loc[j, 'href']       = df_results.loc[i, 'href']
         df_single_lines.loc[j, 'home']      = True
       
-        
-        if df_single_lines.loc[j, 'Score'] > df_single_lines.loc[j, 'Opp_Score']:
-            df_single_lines.loc[j, 'Result'] = 'W'
-        elif df_single_lines.loc[j, 'Score'] < df_single_lines.loc[j, 'Opp_Score']:
-            df_single_lines.loc[j, 'Result'] = 'L'
+        if df_single_lines.loc[j, 'score'] > df_single_lines.loc[j, 'opp_score']:
+            df_single_lines.loc[j, 'result'] = 'W'
+        elif df_single_lines.loc[j, 'score'] < df_single_lines.loc[j, 'opp_score']:
+            df_single_lines.loc[j, 'result'] = 'L'
         else:
-            df_single_lines.loc[j, 'Result'] = 'D'
+            df_single_lines.loc[j, 'result'] = 'D'
         
         j+=1
         
         df_single_lines.loc[j] = [np.nan for n in range(df_single_lines.shape[1])]
-        df_single_lines.loc[j, 'Team']      = df_results.loc[i, 'away_team'].strip()
-        df_single_lines.loc[j, 'Opp_Team']  = df_results.loc[i, 'home_team'].strip()
-        df_single_lines.loc[j, 'Owner']     = df_results.loc[i, 'away_owner'].strip()
-        df_single_lines.loc[j, 'Opp_Owner'] = df_results.loc[i, 'home_owner'].strip()
-        df_single_lines.loc[j, 'Score']     = df_results.loc[i, 'away_score'].strip()
-        df_single_lines.loc[j, 'Opp_Score'] = df_results.loc[i, 'home_score'].strip()
-        df_single_lines.loc[j, 'Gameweek']  = df_results.loc[i, 'gw']
-        df_single_lines.loc[j, 'url']       = df_results.loc[i, 'url']
+        df_single_lines.loc[j, 'team']      = df_results.loc[i, 'away_team'].strip()
+        df_single_lines.loc[j, 'opp_team']  = df_results.loc[i, 'home_team'].strip()
+        df_single_lines.loc[j, 'owner']     = df_results.loc[i, 'away_owner'].strip()
+        df_single_lines.loc[j, 'opp_owner'] = df_results.loc[i, 'home_owner'].strip()
+        df_single_lines.loc[j, 'score']     = df_results.loc[i, 'away_score'].strip()
+        df_single_lines.loc[j, 'opp_score'] = df_results.loc[i, 'home_score'].strip()
+        df_single_lines.loc[j, 'gw']  = df_results.loc[i, 'gw']
+        df_single_lines.loc[j, 'href']       = df_results.loc[i, 'href']
         df_single_lines.loc[j, 'home']      = False
         
-        if df_single_lines.loc[j, 'Score'] > df_single_lines.loc[j, 'Opp_Score']:
-            df_single_lines.loc[j, 'Result'] = 'W'
-        elif df_single_lines.loc[j, 'Score'] < df_single_lines.loc[j, 'Opp_Score']:
-            df_single_lines.loc[j, 'Result'] = 'L'
+        if df_single_lines.loc[j, 'score'] > df_single_lines.loc[j, 'opp_score']:
+            df_single_lines.loc[j, 'result'] = 'W'
+        elif df_single_lines.loc[j, 'score'] < df_single_lines.loc[j, 'opp_score']:
+            df_single_lines.loc[j, 'result'] = 'L'
         else:
-            df_single_lines.loc[j, 'Result'] = 'D'
+            df_single_lines.loc[j, 'result'] = 'D'
 
         j+=1
         
     colormap = {'L': 'red', 'W': 'green', 'D': 'blue'}
-    colors = [colormap[x] for x in df_single_lines['Result']]
+    colors = [colormap[x] for x in df_single_lines['result']]
     df_single_lines['colors'] = colors
     df_single_lines['fill_alpha'] = 1
     df_single_lines['size'] = 11
@@ -182,17 +177,16 @@ def scrape_fixtures():
     df_owners = pd.DataFrame.from_dict(dict_owners).T
     dict_colors = df_owners['Colour'].to_dict()
     
-    # owners have leading whitespace...
-#    df_single_lines['Owner'] = df_single_lines['Owner'].str.strip()
-    df_single_lines['Score'] = pd.to_numeric(df_single_lines['Score'])
-    df_single_lines['Opp_Score'] = pd.to_numeric(df_single_lines['Opp_Score'])
-    df_single_lines['Gameweek'] = pd.to_numeric(df_single_lines['Gameweek'])
+#     # owners have leading whitespace...
+# #    df_single_lines['owner'] = df_single_lines['owner'].str.strip()
+    df_single_lines['score'] = pd.to_numeric(df_single_lines['score'])
+    df_single_lines['opp_score'] = pd.to_numeric(df_single_lines['opp_score'])
+    # df_single_lines['gw'] = pd.to_numeric(df_single_lines['gw'])
 
 #sort to order legend as W-L-D
-    df_single_lines = df_single_lines.sort_values('Result', ascending = False)
+    df_single_lines = df_single_lines.sort_values('result', ascending = False)
         
-    df_single_lines['owner_color'] = df_single_lines['Owner'].map(dict_colors)
-    
+    df_single_lines['owner_color'] = df_single_lines['owner'].map(dict_colors)
 
     # Export
     df_single_lines.to_csv(config.path_results)
@@ -207,8 +201,8 @@ def scrape_transfers():
     driver.get(urlpage)
     time.sleep(5)
 
-    user = 'liampaulhussey@gmail.com'
-    password = 'Mountk26fantasy'
+    user = config2.draft_username
+    password = config2.draft_password
     
     user_id = 'at-field-email'
     password_id = 'at-field-password'
@@ -258,7 +252,7 @@ def scrape_teams():
     
     list_season = []
 
-    driver = webdriver.Chrome('/usr/local/bin/chromedriver')
+    driver = webdriver.Chrome(config.chrome_driver)
     data_view_button = '//*[@id="wrapper"]/div[2]/div/div[3]/div/ul/li[2]' 
     for row in range(0, len(df_results)):
         round_check = False  # initialise
@@ -268,7 +262,7 @@ def scrape_teams():
         
         list_lineup = []
 
-        driver.get(df_results.loc[row, 'url'])
+        driver.get(df_results.loc[row, 'href'])
         while duration < 30:
             try:
                 driver.find_elements_by_xpath(data_view_button)[0].click()
@@ -305,9 +299,9 @@ def scrape_teams():
     
                     list_lineup.append(df_home)
                     
-                    list_data = [df_results.loc[row,'Owner'],
-                                 df_results.loc[row,'Team'],
-                                 df_results.loc[row,'Gameweek']]
+                    list_data = [df_results.loc[row,'owner'],
+                                 df_results.loc[row,'team'],
+                                 df_results.loc[row,'gw']]
                     list_lineup.append(list_data)
     
                     list_season.append(list_lineup)
@@ -332,9 +326,9 @@ def scrape_teams():
     
                     list_lineup.append(df_away)
                     
-                    list_data = [df_results.loc[row,'Owner'],
-                                 df_results.loc[row,'Team'],
-                                 df_results.loc[row,'Gameweek']]
+                    list_data = [df_results.loc[row,'owner'],
+                                 df_results.loc[row,'team'],
+                                 df_results.loc[row,'gw']]
                     list_lineup.append(list_data)
                     
                     list_season.append(list_lineup)
@@ -447,7 +441,7 @@ def novelty_2_structure():
     df_plot = pd.DataFrame()
     for owner in list(set(df_lineups['owner'])):
         df = df_lineups[df_lineups['owner']==owner]
-        for gw in range(1, df_lineups['gw'].max()+1):
+        for gw in range(1, int(df_lineups['gw'].max()+1)):
             series = df[df['gw']==gw].sort_values(by='gw_score', ascending=False).iloc[0]
             df_plot.loc[row,'score']    = series['gw_score']
             df_plot.loc[row,'player']   = series['friendly_name']

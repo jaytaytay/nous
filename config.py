@@ -11,7 +11,7 @@ import os
 path            = os.path.join(os.getcwd(), 'nous_app')
 
 #import sys
-
+chrome_driver = '/usr/local/bin/chromedriver 2'
 
 path_lineups    = os.path.join(path, 'data' ,'fantasy' ,'1920' ,'latest_lineups.csv')
 
@@ -23,18 +23,19 @@ path_novelty_2  = os.path.join(path, 'data' ,'fantasy' ,'1920' ,'novelty_2.csv')
 path_novelty_5  = os.path.join(path,'data' ,'fantasy' ,'1920' ,'novelty_5.csv')
 
 dict_owners = {
-                'Matt Lowry':       {'Team': "Ol' Cider's Lowry",              'first_round_pick': 191,    'Colour':'#ffe6d2'},
-                'Dylan Urquhart':   {'Team': 'Heung like Son' ,                'first_round_pick': 214,    'Colour':'#cc66cc'},
-                'james west':       {'Team': 'best in the west' ,              'first_round_pick': 215,    'Colour':'#ffb400'},
-                'Peter Allan':      {'Team': 'Wizards of Ozil' ,               'first_round_pick': 11,     'Colour':'#c73b32'},
-                'Liam Fariss':      {'Team': 'Corner taken quickly, ORIGIII!' ,'first_round_pick': 12,     'Colour':'#32b4ff'},
-                'Liam Hussey':      {'Team': 'The Feminist Agenda' ,           'first_round_pick': 210,    'Colour':'#995f3d'},
-                'Tom Barratt':      {'Team': "Ain't No Holebas Girl",          'first_round_pick': 192,    'Colour':'#0ac832'},
-                'Dominic Drewery':  {'Team': 'Chopporoos' ,                    'first_round_pick': 338,    'Colour':'#1e2832'}
+                'Matt Lowry':       {'team': "Ol' Cider's Lowry",              'first_round_pick': 191,    'colour':'#ffe6d2'},
+                'Dylan Urquhart':   {'team': 'Heung like Son' ,                'first_round_pick': 214,    'colour':'#cc66cc'},
+                'james west':       {'team': 'best in the west' ,              'first_round_pick': 215,    'colour':'#ffb400'},
+                'Peter Allan':      {'team': 'Wizards of Ozil' ,               'first_round_pick': 11,     'colour':'#c73b32'},
+                'Liam Fariss':      {'team': 'Corner taken quickly, ORIGIII!' ,'first_round_pick': 12,     'colour':'#32b4ff'},
+                'Liam Hussey':      {'team': 'The Feminist Agenda' ,           'first_round_pick': 210,    'colour':'#995f3d'},
+                'Tom Barratt':      {'team': "Ain't No Holebas Girl",          'first_round_pick': 192,    'colour':'#0ac832'},
+                'Dominic Drewery':  {'team': 'Chopporoos' ,                    'first_round_pick': 338,    'colour':'#1e2832'}
                 }
 
 path_pl_past     = os.path.join(path,'data' ,'pl' ,'1920' ,'past.csv')
 path_player_info = os.path.join(path,'data' ,'pl' ,'1920' ,'player_info.csv')
+path_player_info_json = os.path.join(path, 'data' ,'pl' ,'1920' ,'player_info.json')
 path_pl_players  = os.path.join(path,'data' ,'pl' ,'1920' ,'pl_players.csv')
 path_pl_fixtures = os.path.join(path,'data' ,'pl' ,'1920' ,'pl_fixtures.csv')
 path_pl_teams    = os.path.join(path,'data' ,'pl' ,'1920' ,'pl_teams.csv')
